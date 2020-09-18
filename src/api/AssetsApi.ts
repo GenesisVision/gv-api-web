@@ -6,12 +6,14 @@ import { ErrorViewModel } from '../model/ErrorViewModel';
 import { FundAssetPart } from '../model/FundAssetPart';
 import { MakeExchangeAccountProgram } from '../model/MakeExchangeAccountProgram';
 import { MakeProgram } from '../model/MakeProgram';
+import { MakeSelfManagedFundPublicRequest } from '../model/MakeSelfManagedFundPublicRequest';
 import { MakeSignalProviderProgram } from '../model/MakeSignalProviderProgram';
 import { MakeTradingAccountProgram } from '../model/MakeTradingAccountProgram';
 import { MakeTradingAccountSignalProvider } from '../model/MakeTradingAccountSignalProvider';
 import { NewExchangeAccountRequest } from '../model/NewExchangeAccountRequest';
 import { NewExternalTradingAccountRequest } from '../model/NewExternalTradingAccountRequest';
 import { NewFundRequest } from '../model/NewFundRequest';
+import { NewSelfManagedFundRequest } from '../model/NewSelfManagedFundRequest';
 import { NewTradingAccountRequest } from '../model/NewTradingAccountRequest';
 import { ProgramLevelInfo } from '../model/ProgramLevelInfo';
 import { ProgramUpdate } from '../model/ProgramUpdate';
@@ -234,6 +236,22 @@ export default class AssetsApi {
     })
   };
 
+  createSelfManagedFund = (
+    options: {
+      body?: NewSelfManagedFundRequest
+      } = {},
+    init: RequestInit = {}): Promise<Response> => {
+    
+    return generateMethod<Promise<Response>>({
+        init,
+        apiClient: this.apiClient,
+        path: "/v2.0/assets/funds/selfmanaged/create",
+        body: JSON.stringify(options['body']),
+        
+        method: "POST",
+    })
+  };
+
   createTradingAccount = (
     options: {
       body?: NewTradingAccountRequest
@@ -378,6 +396,22 @@ export default class AssetsApi {
         path: "/v2.0/assets/programs/create",
         body: JSON.stringify(options['body']),
         returnType: "structure",
+        method: "POST",
+    })
+  };
+
+  makeSelfManagedFundPublic = (
+    options: {
+      body?: MakeSelfManagedFundPublicRequest
+      } = {},
+    init: RequestInit = {}): Promise<Response> => {
+    
+    return generateMethod<Promise<Response>>({
+        init,
+        apiClient: this.apiClient,
+        path: "/v2.0/assets/funds/selfmanaged/makepublic",
+        body: JSON.stringify(options['body']),
+        
         method: "POST",
     })
   };

@@ -161,6 +161,7 @@ export type { LimitWithoutKyc } from "./model/LimitWithoutKyc";
 export type { LoginViewModel } from "./model/LoginViewModel";
 export type { MakeExchangeAccountProgram } from "./model/MakeExchangeAccountProgram";
 export type { MakeProgram } from "./model/MakeProgram";
+export type { MakeSelfManagedFundPublicRequest } from "./model/MakeSelfManagedFundPublicRequest";
 export type { MakeSignalProviderProgram } from "./model/MakeSignalProviderProgram";
 export type { MakeTradingAccountProgram } from "./model/MakeTradingAccountProgram";
 export type { MakeTradingAccountSignalProvider } from "./model/MakeTradingAccountSignalProvider";
@@ -177,6 +178,7 @@ export type { NewExternalTradingAccountRequest } from "./model/NewExternalTradin
 export type { NewFundRequest } from "./model/NewFundRequest";
 export type { NewPost } from "./model/NewPost";
 export type { NewPostImage } from "./model/NewPostImage";
+export type { NewSelfManagedFundRequest } from "./model/NewSelfManagedFundRequest";
 export type { NewTradingAccountRequest } from "./model/NewTradingAccountRequest";
 export type { NotificationList } from "./model/NotificationList";
 export type { NotificationSettingConditionType } from "./model/NotificationSettingConditionType";
