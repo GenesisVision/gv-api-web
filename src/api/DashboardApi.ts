@@ -293,6 +293,30 @@ export default class DashboardApi {
     })
   };
 
+  getSelfManagedFunds = (
+    options: {
+      dateFrom?: Date,
+      dateTo?: Date,
+      chartPointsCount?: number,
+      showIn?: Currency,
+      status?: DashboardAssetStatus,
+      skipStatistic?: boolean,
+      skip?: number,
+      take?: number
+      } = {},
+    init: RequestInit = {}): Promise<DashboardTradingAssetItemsViewModel> => {
+    
+    return generateMethod<Promise<DashboardTradingAssetItemsViewModel>>({
+        init,
+        queryParams: {  DateFrom: options['dateFrom'],   DateTo: options['dateTo'],   ChartPointsCount: options['chartPointsCount'],   ShowIn: options['showIn'],   Status: options['status'],   SkipStatistic: options['skipStatistic'],   Skip: options['skip'],   Take: options['take']  },
+        apiClient: this.apiClient,
+        path: "/v2.0/dashboard/trading/private/selfmanaged",
+        
+        returnType: "structure",
+        method: "GET",
+    })
+  };
+
   getTradingDetails = (
     options: {
       currency?: Currency,
