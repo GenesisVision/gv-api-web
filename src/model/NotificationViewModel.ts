@@ -1,4 +1,5 @@
 import { AssetGlobalType } from './AssetGlobalType';
+import { NotificationLocationViewModel } from './NotificationLocationViewModel';
 import { NotificationType } from './NotificationType';
 
 export interface NotificationViewModel {
@@ -13,5 +14,7 @@ export interface NotificationViewModel {
     color: string;
     isUnread: boolean;
     assetType: AssetGlobalType;
+    imageUrl: string;
+    location: NotificationLocationViewModel;
 }
 
