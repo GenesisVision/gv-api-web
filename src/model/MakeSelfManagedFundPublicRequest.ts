@@ -1,6 +1,6 @@
 
 export interface MakeSelfManagedFundPublicRequest {
-    fundId: string;
+    id: string;
     description: string;
     entryFee: number;
     exitFee: number;
