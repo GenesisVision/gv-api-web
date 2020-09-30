@@ -1,0 +1,2 @@
+
+export type BinanceRawKlineInterval = 'OneMinute' | 'ThreeMinutes' | 'FiveMinutes' | 'FifteenMinutes' | 'ThirtyMinutes' | 'OneHour' | 'TwoHour' | 'FourHour' | 'SixHour' | 'EightHour' | 'TwelveHour' | 'OneDay' | 'ThreeDay' | 'OneWeek' | 'OneMonth';
