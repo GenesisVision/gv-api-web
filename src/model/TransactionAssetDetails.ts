@@ -2,8 +2,6 @@ import { AssetType } from './AssetType';
 import { ProgramAssetDetails } from './ProgramAssetDetails';
 
 export interface TransactionAssetDetails {
-    description: string;
-    manager: string;
     id: string;
     logoUrl: string;
     color: string;
@@ -11,5 +9,7 @@ export interface TransactionAssetDetails {
     url: string;
     assetType: AssetType;
     programDetails: ProgramAssetDetails;
+    description: string;
+    manager: string;
 }
 

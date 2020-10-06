@@ -7,11 +7,6 @@ import { TradeDirectionType } from './TradeDirectionType';
 import { TradeEntryType } from './TradeEntryType';
 
 export interface OrderSignalModel {
-    providers: Array<OrderSignalProgramInfo>;
-    totalCommission: number;
-    totalCommissionByType: Array<FeeDetails>;
-    tradingAccountId: string;
-    currency: Currency;
     id: string;
     login: string;
     ticket: string;
@@ -32,5 +27,10 @@ export interface OrderSignalModel {
     showOriginalCommission: boolean;
     assetData: TradeAssetData;
     signalData: OrderModelSignalData;
+    providers: Array<OrderSignalProgramInfo>;
+    totalCommission: number;
+    totalCommissionByType: Array<FeeDetails>;
+    tradingAccountId: string;
+    currency: Currency;
 }
 

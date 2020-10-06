@@ -2,6 +2,9 @@ import { Currency } from './Currency';
 import { TradesDelay } from './TradesDelay';
 
 export interface MakeExchangeAccountProgram {
+    title: string;
+    description: string;
+    logo: string;
     id: string;
     currency: Currency;
     hourProcessing: number;
@@ -10,8 +13,5 @@ export interface MakeExchangeAccountProgram {
     managementFee: number;
     successFee: number;
     investmentLimit: number;
-    title: string;
-    description: string;
-    logo: string;
 }
 

@@ -2,12 +2,6 @@ import { AssetType } from './AssetType';
 import { ProgramAssetDetails } from './ProgramAssetDetails';
 
 export interface AssetRequestDetails {
-    entryFee: number;
-    managementFee: number;
-    exitFee: number;
-    withdrawPercent: number;
-    isWithdrawAll: boolean;
-    successFee: number;
     id: string;
     logoUrl: string;
     color: string;
@@ -15,5 +9,11 @@ export interface AssetRequestDetails {
     url: string;
     assetType: AssetType;
     programDetails: ProgramAssetDetails;
+    entryFee: number;
+    managementFee: number;
+    exitFee: number;
+    withdrawPercent: number;
+    isWithdrawAll: boolean;
+    successFee: number;
 }
 

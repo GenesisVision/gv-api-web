@@ -1,6 +1,10 @@
 import { Currency } from './Currency';
 
 export interface WalletData {
+    currency: Currency;
+    available: number;
+    invested: number;
+    trading: number;
     pending: number;
     readonly total: number;
     availableCcy: number;
@@ -16,9 +20,5 @@ export interface WalletData {
     withdrawalCommission: number;
     depositAddress: string;
     depositUrlCoindirect: string;
-    currency: Currency;
-    available: number;
-    invested: number;
-    trading: number;
 }
 

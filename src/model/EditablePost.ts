@@ -6,7 +6,6 @@ import { ProfilePublic } from './ProfilePublic';
 import { ProfilePublicShort } from './ProfilePublicShort';
 
 export interface EditablePost {
-    textOriginal: string;
     id: string;
     url: string;
     text: string;
@@ -24,5 +23,6 @@ export interface EditablePost {
     author: ProfilePublic;
     personalDetails: PostPersonalDetails;
     comments: Array<Post>;
+    textOriginal: string;
 }
 

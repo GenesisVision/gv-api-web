@@ -3,10 +3,6 @@ import { ChangeState } from './ChangeState';
 import { Currency } from './Currency';
 
 export interface PostPlatformAssetDetailsWithPrices {
-    price: number;
-    priceCurrency: Currency;
-    change24Percent: number;
-    changeState: ChangeState;
     id: string;
     name: string;
     asset: string;
@@ -15,5 +11,9 @@ export interface PostPlatformAssetDetailsWithPrices {
     color: string;
     url: string;
     provider: AssetProvider;
+    price: number;
+    priceCurrency: Currency;
+    change24Percent: number;
+    changeState: ChangeState;
 }
 

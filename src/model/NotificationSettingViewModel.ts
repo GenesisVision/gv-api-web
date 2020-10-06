@@ -2,12 +2,12 @@ import { NotificationSettingConditionType } from './NotificationSettingCondition
 import { NotificationType } from './NotificationType';
 
 export interface NotificationSettingViewModel {
-    id: string;
-    isEnabled: boolean;
     assetId: string;
     managerId: string;
     type: NotificationType;
     conditionType: NotificationSettingConditionType;
     conditionAmount: number;
+    id: string;
+    isEnabled: boolean;
 }
 

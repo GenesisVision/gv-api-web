@@ -4,10 +4,6 @@ import { Currency } from './Currency';
 import { ProgramAssetDetails } from './ProgramAssetDetails';
 
 export interface PostAssetDetailsWithPrices {
-    price: number;
-    priceCurrency: Currency;
-    change24Percent: number;
-    changeState: ChangeState;
     id: string;
     logoUrl: string;
     color: string;
@@ -15,5 +11,9 @@ export interface PostAssetDetailsWithPrices {
     url: string;
     assetType: AssetType;
     programDetails: ProgramAssetDetails;
+    price: number;
+    priceCurrency: Currency;
+    change24Percent: number;
+    changeState: ChangeState;
 }
 

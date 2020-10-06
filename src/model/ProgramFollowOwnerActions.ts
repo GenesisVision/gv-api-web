@@ -1,10 +1,5 @@
 
 export interface ProgramFollowOwnerActions {
-    canClose: boolean;
-    canClosePeriod: boolean;
-    canChangePassword: boolean;
-    canTransferMoney: boolean;
-    canCloseOpenPositions: boolean;
     canMakeProgramFromPrivateTradingAccount: boolean;
     canMakeExchangeProgramFromPrivateTradingAccount: boolean;
     canMakeSignalProviderFromPrivateTradingAccount: boolean;
@@ -14,5 +9,10 @@ export interface ProgramFollowOwnerActions {
     canEditSignalProviderSettings: boolean;
     isEnoughMoneyToCreateProgram: boolean;
     canConfirm2FA: boolean;
+    canClose: boolean;
+    canClosePeriod: boolean;
+    canChangePassword: boolean;
+    canTransferMoney: boolean;
+    canCloseOpenPositions: boolean;
 }
 

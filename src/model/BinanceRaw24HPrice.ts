@@ -1,12 +1,5 @@
 
 export interface BinanceRaw24HPrice {
-    prevDayClosePrice: number;
-    bidPrice: number;
-    bidQuantity: number;
-    askPrice: number;
-    askQuantity: number;
-    baseVolume: number;
-    quoteVolume: number;
     symbol: string;
     priceChange: number;
     priceChangePercent: number;
@@ -21,5 +14,12 @@ export interface BinanceRaw24HPrice {
     firstTradeId: number;
     lastTradeId: number;
     totalTrades: number;
+    prevDayClosePrice: number;
+    bidPrice: number;
+    bidQuantity: number;
+    askPrice: number;
+    askQuantity: number;
+    baseVolume: number;
+    quoteVolume: number;
 }
 

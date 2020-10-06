@@ -1,10 +1,5 @@
 
 export interface PrivateTradingAccountOwnerActions {
-    canClose: boolean;
-    canChangePassword: boolean;
-    canTransferMoney: boolean;
-    canMakeDemoDeposit: boolean;
-    canCloseOpenPositions: boolean;
     canMakeProgramFromPrivateTradingAccount: boolean;
     canMakeExchangeProgramFromPrivateTradingAccount: boolean;
     canMakeSignalProviderFromPrivateTradingAccount: boolean;
@@ -14,5 +9,10 @@ export interface PrivateTradingAccountOwnerActions {
     canEditSignalProviderSettings: boolean;
     isEnoughMoneyToCreateProgram: boolean;
     canConfirm2FA: boolean;
+    canClose: boolean;
+    canChangePassword: boolean;
+    canTransferMoney: boolean;
+    canMakeDemoDeposit: boolean;
+    canCloseOpenPositions: boolean;
 }
 

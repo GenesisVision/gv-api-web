@@ -12,6 +12,5 @@ export interface ProgramUpdate {
     tradesDelay: TradesDelay;
     hourProcessing: number;
     isProcessingRealTime: boolean;
-    id: string;
 }
 

@@ -2,6 +2,11 @@ import { Currency } from './Currency';
 import { TradesDelay } from './TradesDelay';
 
 export interface MakeProgram {
+    depositAmount: number;
+    depositWalletId: string;
+    currency: Currency;
+    leverage: number;
+    brokerAccountTypeId: string;
     title: string;
     description: string;
     logo: string;
@@ -11,10 +16,5 @@ export interface MakeProgram {
     tradesDelay: TradesDelay;
     successFee: number;
     managementFee: number;
-    depositAmount: number;
-    depositWalletId: string;
-    currency: Currency;
-    leverage: number;
-    brokerAccountTypeId: string;
 }
 

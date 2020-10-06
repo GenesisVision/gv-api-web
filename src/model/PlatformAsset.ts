@@ -1,7 +1,6 @@
 import { AssetProvider } from './AssetProvider';
 
 export interface PlatformAsset {
-    mandatoryFundPercent: number;
     id: string;
     name: string;
     asset: string;
@@ -10,5 +9,6 @@ export interface PlatformAsset {
     color: string;
     url: string;
     provider: AssetProvider;
+    mandatoryFundPercent: number;
 }
 
