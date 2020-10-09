@@ -3,6 +3,7 @@ import { generateMethod, buildPathString, buildQueryString, handleErrors, checkR
 import { EditPost } from '../model/EditPost';
 import { EditablePost } from '../model/EditablePost';
 import { ErrorViewModel } from '../model/ErrorViewModel';
+import { MediaPost } from '../model/MediaPost';
 import { MediaPostItemsViewModel } from '../model/MediaPostItemsViewModel';
 import { NewPost } from '../model/NewPost';
 import { Post } from '../model/Post';
@@ -195,6 +196,23 @@ export default class SocialApi {
         queryParams: {  Mask: options['mask'],   Type: options['type'],   Skip: options['skip'],   Take: options['take']  },
         apiClient: this.apiClient,
         path: "/v2.0/social/feed/media",
+        
+        returnType: "structure",
+        method: "GET",
+    })
+  };
+
+  getSocialMediaPost = (
+    id: string,
+    options: {
+      } = {},
+    init: RequestInit = {}): Promise<MediaPost> => {
+    
+    return generateMethod<Promise<MediaPost>>({
+        init,
+        pathParams: {  id  },
+        apiClient: this.apiClient,
+        path: "/v2.0/social/feed/media/{id}",
         
         returnType: "structure",
         method: "GET",
