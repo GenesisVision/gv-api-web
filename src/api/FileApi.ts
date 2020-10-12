@@ -14,7 +14,8 @@ export default class FileApi {
   uploadFile = (
     options: {
       uploadedFile?: File,
-      location?: ImageLocation
+      location?: ImageLocation,
+      waitForResize?: boolean
       } = {},
     init: RequestInit = {}): Promise<UploadResult> => {
     const formParams = new FormData();
@@ -24,7 +25,7 @@ export default class FileApi {
     
     return generateMethod<Promise<UploadResult>>({
         init,
-        queryParams: {  location: options['location']  },
+        queryParams: {  location: options['location'],   waitForResize: options['waitForResize']  },
         apiClient: this.apiClient,
         path: "/v2.0/file/upload",
         formParams,
