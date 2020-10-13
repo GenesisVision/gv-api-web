@@ -4,10 +4,10 @@ import { ErrorViewModel } from '../model/ErrorViewModel';
 import { FollowNotificationSettingList } from '../model/FollowNotificationSettingList';
 import { FundNotificationSettingList } from '../model/FundNotificationSettingList';
 import { ManagerNotificationSettingList } from '../model/ManagerNotificationSettingList';
-import { NotificationList } from '../model/NotificationList';
 import { NotificationSettingConditionType } from '../model/NotificationSettingConditionType';
 import { NotificationSettingList } from '../model/NotificationSettingList';
 import { NotificationType } from '../model/NotificationType';
+import { NotificationViewModelItemsViewModel } from '../model/NotificationViewModelItemsViewModel';
 import { ProgramNotificationSettingList } from '../model/ProgramNotificationSettingList';
 
 export default class NotificationsApi {
@@ -58,13 +58,13 @@ export default class NotificationsApi {
       skip?: number,
       take?: number
       } = {},
-    init: RequestInit = {}): Promise<NotificationList> => {
+    init: RequestInit = {}): Promise<NotificationViewModelItemsViewModel> => {
     
-    return generateMethod<Promise<NotificationList>>({
+    return generateMethod<Promise<NotificationViewModelItemsViewModel>>({
         init,
-        queryParams: {  skip: options['skip'],   take: options['take']  },
+        queryParams: {  Skip: options['skip'],   Take: options['take']  },
         apiClient: this.apiClient,
-        path: "/v2.0/notifications",
+        path: "/v2.1/notifications",
         
         returnType: "structure",
         method: "GET",

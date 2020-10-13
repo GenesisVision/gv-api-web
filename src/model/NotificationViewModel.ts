@@ -1,20 +1,18 @@
-import { AssetGlobalType } from './AssetGlobalType';
+import { AssetDetails } from './AssetDetails';
+import { BasePlatformAsset } from './BasePlatformAsset';
 import { NotificationLocationViewModel } from './NotificationLocationViewModel';
-import { NotificationType } from './NotificationType';
+import { ProfilePublic } from './ProfilePublic';
 
 export interface NotificationViewModel {
     id: string;
     text: string;
+    type: string;
     date: Date;
-    type: NotificationType;
-    assetId: string;
-    managerId: string;
-    logoUrl: string;
-    url: string;
-    color: string;
-    isUnread: boolean;
-    assetType: AssetGlobalType;
     imageUrl: string;
+    isUnread: boolean;
     location: NotificationLocationViewModel;
+    assetDetails: AssetDetails;
+    userDetails: ProfilePublic;
+    platformAssetDetails: BasePlatformAsset;
 }
 
