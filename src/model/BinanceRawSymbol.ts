@@ -1,6 +1,13 @@
 import { BinanceRawAccountType } from './BinanceRawAccountType';
 import { BinanceRawOrderType } from './BinanceRawOrderType';
-import { BinanceRawSymbolFilter } from './BinanceRawSymbolFilter';
+import { BinanceRawSymbolIcebergPartsFilter } from './BinanceRawSymbolIcebergPartsFilter';
+import { BinanceRawSymbolLotSizeFilter } from './BinanceRawSymbolLotSizeFilter';
+import { BinanceRawSymbolMarketLotSizeFilter } from './BinanceRawSymbolMarketLotSizeFilter';
+import { BinanceRawSymbolMaxAlgorithmicOrdersFilter } from './BinanceRawSymbolMaxAlgorithmicOrdersFilter';
+import { BinanceRawSymbolMaxOrdersFilter } from './BinanceRawSymbolMaxOrdersFilter';
+import { BinanceRawSymbolMinNotionalFilter } from './BinanceRawSymbolMinNotionalFilter';
+import { BinanceRawSymbolPercentPriceFilter } from './BinanceRawSymbolPercentPriceFilter';
+import { BinanceRawSymbolPriceFilter } from './BinanceRawSymbolPriceFilter';
 import { BinanceRawSymbolStatus } from './BinanceRawSymbolStatus';
 
 export interface BinanceRawSymbol {
@@ -19,6 +26,13 @@ export interface BinanceRawSymbol {
     baseCommissionPrecision: number;
     quoteCommissionPrecision: number;
     permissions: Array<BinanceRawAccountType>;
-    filters: Array<BinanceRawSymbolFilter>;
+    iceBergPartsFilter: BinanceRawSymbolIcebergPartsFilter;
+    lotSizeFilter: BinanceRawSymbolLotSizeFilter;
+    marketLotSizeFilter: BinanceRawSymbolMarketLotSizeFilter;
+    maxOrdersFilter: BinanceRawSymbolMaxOrdersFilter;
+    maxAlgorithmicOrdersFilter: BinanceRawSymbolMaxAlgorithmicOrdersFilter;
+    minNotionalFilter: BinanceRawSymbolMinNotionalFilter;
+    priceFilter: BinanceRawSymbolPriceFilter;
+    pricePercentFilter: BinanceRawSymbolPercentPriceFilter;
 }
 
