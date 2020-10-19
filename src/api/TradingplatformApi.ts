@@ -2,6 +2,8 @@ import ApiClient from "../ApiClient";
 import { generateMethod, buildPathString, buildQueryString, handleErrors, checkRequiredParameter, buildPathAndQuery } from "../utils";
 import { BinanceRaw24HPrice } from '../model/BinanceRaw24HPrice';
 import { BinanceRawAccountInfo } from '../model/BinanceRawAccountInfo';
+import { BinanceRawCancelOrder } from '../model/BinanceRawCancelOrder';
+import { BinanceRawCancelOrderId } from '../model/BinanceRawCancelOrderId';
 import { BinanceRawExchangeInfo } from '../model/BinanceRawExchangeInfo';
 import { BinanceRawKlineInterval } from '../model/BinanceRawKlineInterval';
 import { BinanceRawKlineItemsViewModel } from '../model/BinanceRawKlineItemsViewModel';
@@ -42,15 +44,15 @@ export default class TradingplatformApi {
       accountId?: string,
       symbol?: string
       } = {},
-    init: RequestInit = {}): Promise<Response> => {
+    init: RequestInit = {}): Promise<Array<BinanceRawCancelOrderId>> => {
     
-    return generateMethod<Promise<Response>>({
+    return generateMethod<Promise<Array<BinanceRawCancelOrderId>>>({
         init,
         queryParams: {  accountId: options['accountId'],   symbol: options['symbol']  },
         apiClient: this.apiClient,
-        path: "/v2.0/tradingplatform/binance/spot/orders/close/all",
+        path: "/v2.0/tradingplatform/binance/spot/orders/cancel/all",
         
-        
+        returnType: "structure",
         method: "POST",
     })
   };
@@ -61,15 +63,15 @@ export default class TradingplatformApi {
       symbol?: string,
       orderId?: string
       } = {},
-    init: RequestInit = {}): Promise<Response> => {
+    init: RequestInit = {}): Promise<BinanceRawCancelOrder> => {
     
-    return generateMethod<Promise<Response>>({
+    return generateMethod<Promise<BinanceRawCancelOrder>>({
         init,
         queryParams: {  accountId: options['accountId'],   symbol: options['symbol'],   orderId: options['orderId']  },
         apiClient: this.apiClient,
-        path: "/v2.0/tradingplatform/binance/spot/orders/close",
+        path: "/v2.0/tradingplatform/binance/spot/orders/cancel",
         
-        
+        returnType: "structure",
         method: "POST",
     })
   };
@@ -85,6 +87,21 @@ export default class TradingplatformApi {
         pathParams: {  symbol  },
         apiClient: this.apiClient,
         path: "/v2.0/tradingplatform/binance/market/{symbol}/ticker/24hr",
+        
+        returnType: "structure",
+        method: "GET",
+    })
+  };
+
+  get24HPrices = (
+    options: {
+      } = {},
+    init: RequestInit = {}): Promise<Array<BinanceRaw24HPrice>> => {
+    
+    return generateMethod<Promise<Array<BinanceRaw24HPrice>>>({
+        init,
+        apiClient: this.apiClient,
+        path: "/v2.0/tradingplatform/binance/market/ticker/24hr",
         
         returnType: "structure",
         method: "GET",

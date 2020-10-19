@@ -39,6 +39,8 @@ export type { BinanceRaw24HPrice } from "./model/BinanceRaw24HPrice";
 export type { BinanceRawAccountInfo } from "./model/BinanceRawAccountInfo";
 export type { BinanceRawAccountType } from "./model/BinanceRawAccountType";
 export type { BinanceRawBinanceBalance } from "./model/BinanceRawBinanceBalance";
+export type { BinanceRawCancelOrder } from "./model/BinanceRawCancelOrder";
+export type { BinanceRawCancelOrderId } from "./model/BinanceRawCancelOrderId";
 export type { BinanceRawExchangeInfo } from "./model/BinanceRawExchangeInfo";
 export type { BinanceRawKline } from "./model/BinanceRawKline";
 export type { BinanceRawKlineInterval } from "./model/BinanceRawKlineInterval";
