@@ -56,6 +56,7 @@ export type { BinanceRawPlaceOrder } from "./model/BinanceRawPlaceOrder";
 export type { BinanceRawRateLimit } from "./model/BinanceRawRateLimit";
 export type { BinanceRawRateLimitInterval } from "./model/BinanceRawRateLimitInterval";
 export type { BinanceRawRateLimitType } from "./model/BinanceRawRateLimitType";
+export type { BinanceRawRecentTrade } from "./model/BinanceRawRecentTrade";
 export type { BinanceRawSymbol } from "./model/BinanceRawSymbol";
 export type { BinanceRawSymbolFilterType } from "./model/BinanceRawSymbolFilterType";
 export type { BinanceRawSymbolIcebergPartsFilter } from "./model/BinanceRawSymbolIcebergPartsFilter";

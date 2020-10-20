@@ -10,6 +10,7 @@ import { BinanceRawKlineItemsViewModel } from '../model/BinanceRawKlineItemsView
 import { BinanceRawOrderBook } from '../model/BinanceRawOrderBook';
 import { BinanceRawOrderItemsViewModel } from '../model/BinanceRawOrderItemsViewModel';
 import { BinanceRawPlaceOrder } from '../model/BinanceRawPlaceOrder';
+import { BinanceRawRecentTrade } from '../model/BinanceRawRecentTrade';
 import { ErrorViewModel } from '../model/ErrorViewModel';
 import { StringItemsViewModel } from '../model/StringItemsViewModel';
 import { TradingPlatformBinanceOrdersMode } from '../model/TradingPlatformBinanceOrdersMode';
@@ -224,6 +225,25 @@ export default class TradingplatformApi {
         queryParams: {  limit: options['limit']  },
         apiClient: this.apiClient,
         path: "/v2.0/tradingplatform/binance/market/{symbol}/depth",
+        
+        returnType: "structure",
+        method: "GET",
+    })
+  };
+
+  getSymbolRecentTrades = (
+    symbol: string,
+    options: {
+      limit?: number
+      } = {},
+    init: RequestInit = {}): Promise<Array<BinanceRawRecentTrade>> => {
+    
+    return generateMethod<Promise<Array<BinanceRawRecentTrade>>>({
+        init,
+        pathParams: {  symbol  },
+        queryParams: {  limit: options['limit']  },
+        apiClient: this.apiClient,
+        path: "/v2.0/tradingplatform/binance/market/{symbol}/trades/recent",
         
         returnType: "structure",
         method: "GET",
