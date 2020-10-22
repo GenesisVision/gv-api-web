@@ -13,6 +13,7 @@ import { BinanceRawPlaceOrder } from '../model/BinanceRawPlaceOrder';
 import { BinanceRawRecentTrade } from '../model/BinanceRawRecentTrade';
 import { ErrorViewModel } from '../model/ErrorViewModel';
 import { StringItemsViewModel } from '../model/StringItemsViewModel';
+import { TimestampDate } from '../model/TimestampDate';
 import { TradingPlatformBinanceOrdersMode } from '../model/TradingPlatformBinanceOrdersMode';
 
 export default class TradingplatformApi {
@@ -144,14 +145,14 @@ export default class TradingplatformApi {
   getExchangeTime = (
     options: {
       } = {},
-    init: RequestInit = {}): Promise<Date> => {
+    init: RequestInit = {}): Promise<TimestampDate> => {
     
-    return generateMethod<Promise<Date>>({
+    return generateMethod<Promise<TimestampDate>>({
         init,
         apiClient: this.apiClient,
         path: "/v2.0/tradingplatform/binance/server/time",
         
-        returnType: "primitive",
+        returnType: "structure",
         method: "GET",
     })
   };

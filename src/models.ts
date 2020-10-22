@@ -345,6 +345,7 @@ export type { StringItemsViewModel } from "./model/StringItemsViewModel";
 export type { SubscriptionMode } from "./model/SubscriptionMode";
 export type { Tag } from "./model/Tag";
 export type { Timeframe } from "./model/Timeframe";
+export type { TimestampDate } from "./model/TimestampDate";
 export type { TradeAssetData } from "./model/TradeAssetData";
 export type { TradeDirectionType } from "./model/TradeDirectionType";
 export type { TradeEntryType } from "./model/TradeEntryType";
