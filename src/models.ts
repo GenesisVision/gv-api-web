@@ -129,7 +129,7 @@ export type { EventTradingItemFilters } from "./model/EventTradingItemFilters";
 export type { ExchangeAccountType } from "./model/ExchangeAccountType";
 export type { ExchangeInfo } from "./model/ExchangeInfo";
 export type { ExchangeInfoItemsViewModel } from "./model/ExchangeInfoItemsViewModel";
-export type { ExternalKycMobileToken } from "./model/ExternalKycMobileToken";
+export type { ExternalKycAccessToken } from "./model/ExternalKycAccessToken";
 export type { FacetSortType } from "./model/FacetSortType";
 export type { FcmTokenViewModel } from "./model/FcmTokenViewModel";
 export type { FeeDetails } from "./model/FeeDetails";

@@ -3,7 +3,7 @@ import { generateMethod, buildPathString, buildQueryString, handleErrors, checkR
 import { BetaTestingType } from '../model/BetaTestingType';
 import { Currency } from '../model/Currency';
 import { ErrorViewModel } from '../model/ErrorViewModel';
-import { ExternalKycMobileToken } from '../model/ExternalKycMobileToken';
+import { ExternalKycAccessToken } from '../model/ExternalKycAccessToken';
 import { FcmTokenViewModel } from '../model/FcmTokenViewModel';
 import { ProfileFullViewModel } from '../model/ProfileFullViewModel';
 import { ProfileHeaderViewModel } from '../model/ProfileHeaderViewModel';
@@ -24,9 +24,9 @@ export default class ProfileApi {
   getMobileVerificationToken = (
     options: {
       } = {},
-    init: RequestInit = {}): Promise<ExternalKycMobileToken> => {
+    init: RequestInit = {}): Promise<ExternalKycAccessToken> => {
     
-    return generateMethod<Promise<ExternalKycMobileToken>>({
+    return generateMethod<Promise<ExternalKycAccessToken>>({
         init,
         apiClient: this.apiClient,
         path: "/v2.0/profile/verification/mobile/token",
@@ -81,17 +81,17 @@ export default class ProfileApi {
     })
   };
 
-  getVerificationToken = (
+  getWebVerificationToken = (
     options: {
       } = {},
-    init: RequestInit = {}): Promise<string> => {
+    init: RequestInit = {}): Promise<ExternalKycAccessToken> => {
     
-    return generateMethod<Promise<string>>({
+    return generateMethod<Promise<ExternalKycAccessToken>>({
         init,
         apiClient: this.apiClient,
-        path: "/v2.0/profile/verification/token",
+        path: "/v2.0/profile/verification/web/token",
         
-        returnType: "primitive",
+        returnType: "structure",
         method: "POST",
     })
   };
