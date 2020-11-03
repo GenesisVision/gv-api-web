@@ -4,5 +4,6 @@ export interface BinanceRawBinanceBalance {
     free: number;
     locked: number;
     readonly total: number;
+    amountInCurrency: number;
 }
 

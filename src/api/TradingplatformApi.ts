@@ -11,6 +11,7 @@ import { BinanceRawOrderBook } from '../model/BinanceRawOrderBook';
 import { BinanceRawOrderItemsViewModel } from '../model/BinanceRawOrderItemsViewModel';
 import { BinanceRawPlaceOrder } from '../model/BinanceRawPlaceOrder';
 import { BinanceRawRecentTrade } from '../model/BinanceRawRecentTrade';
+import { Currency } from '../model/Currency';
 import { ErrorViewModel } from '../model/ErrorViewModel';
 import { StringItemsViewModel } from '../model/StringItemsViewModel';
 import { TimestampDate } from '../model/TimestampDate';
@@ -112,13 +113,14 @@ export default class TradingplatformApi {
 
   getAccountInfo = (
     options: {
-      accountId?: string
+      accountId?: string,
+      currency?: Currency
       } = {},
     init: RequestInit = {}): Promise<BinanceRawAccountInfo> => {
     
     return generateMethod<Promise<BinanceRawAccountInfo>>({
         init,
-        queryParams: {  accountId: options['accountId']  },
+        queryParams: {  accountId: options['accountId'],   currency: options['currency']  },
         apiClient: this.apiClient,
         path: "/v2.0/tradingplatform/binance/account",
         
