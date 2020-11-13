@@ -1,2 +1,2 @@
 
-export type TradingPlatformBinanceOrdersMode = 'History' | 'OpenOrders';
+export type TradingPlatformBinanceOrdersMode = 'TradeHistory' | 'OrderHistory';
