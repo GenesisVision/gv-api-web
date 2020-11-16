@@ -24,21 +24,4 @@ export default class GuidesApi {
         method: "GET",
     })
   };
-
-  passGuide = (
-    options: {
-      id?: string
-      } = {},
-    init: RequestInit = {}): Promise<Response> => {
-    
-    return generateMethod<Promise<Response>>({
-        init,
-        queryParams: {  id: options['id']  },
-        apiClient: this.apiClient,
-        path: "/v2.0/guides/pass",
-        
-        
-        method: "POST",
-    })
-  };
 }
