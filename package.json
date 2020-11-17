@@ -1,6 +1,6 @@
 {
   "name": "gv-api-web",
-  "version": "2.1.611",
+  "version": "2.1.612",
   "scripts": {
     "build": "npm run clean && npm run generate-api",
     "generate-api": "node bash/generate",
