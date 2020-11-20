@@ -3,6 +3,7 @@ import { Currency } from './Currency';
 import { DashboardTradingAssetCredentials } from './DashboardTradingAssetCredentials';
 
 export interface ExchangeAsset {
+    id: string;
     title: string;
     creationDate: Date;
     balance: number;
