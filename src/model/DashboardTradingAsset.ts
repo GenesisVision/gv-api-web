@@ -3,7 +3,6 @@ import { AssetTypeExt } from './AssetTypeExt';
 import { DashboardTradingAssetActions } from './DashboardTradingAssetActions';
 import { DashboardTradingAssetBrokerDetails } from './DashboardTradingAssetBrokerDetails';
 import { DashboardTradingAssetCommonDetails } from './DashboardTradingAssetCommonDetails';
-import { DashboardTradingAssetCredentials } from './DashboardTradingAssetCredentials';
 import { DashboardTradingAssetPublicDetails } from './DashboardTradingAssetPublicDetails';
 import { DashboardTradingAssetSignalDetails } from './DashboardTradingAssetSignalDetails';
 import { ProfitChart } from './ProfitChart';
@@ -16,7 +15,6 @@ export interface DashboardTradingAsset {
     statistic: ProfitChart;
     publicInfo: DashboardTradingAssetPublicDetails;
     accountInfo: DashboardTradingAssetCommonDetails;
-    credentials: DashboardTradingAssetCredentials;
     signalInfo: DashboardTradingAssetSignalDetails;
     broker: DashboardTradingAssetBrokerDetails;
     actions: DashboardTradingAssetActions;

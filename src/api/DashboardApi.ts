@@ -6,7 +6,6 @@ import { DashboardAssetStatus } from '../model/DashboardAssetStatus';
 import { DashboardAssets } from '../model/DashboardAssets';
 import { DashboardChart } from '../model/DashboardChart';
 import { DashboardChartAssets } from '../model/DashboardChartAssets';
-import { DashboardExchangeTradingAsset } from '../model/DashboardExchangeTradingAsset';
 import { DashboardInvestingDetails } from '../model/DashboardInvestingDetails';
 import { DashboardPortfolio } from '../model/DashboardPortfolio';
 import { DashboardSummary } from '../model/DashboardSummary';
@@ -74,24 +73,6 @@ export default class DashboardApi {
         queryParams: {  currency: options['currency']  },
         apiClient: this.apiClient,
         path: "/v2.0/dashboard/summary",
-        
-        returnType: "structure",
-        method: "GET",
-    })
-  };
-
-  getExchangeAccountCredentials = (
-    options: {
-      exchangeAccountId?: string,
-      brokerId?: string
-      } = {},
-    init: RequestInit = {}): Promise<DashboardExchangeTradingAsset> => {
-    
-    return generateMethod<Promise<DashboardExchangeTradingAsset>>({
-        init,
-        queryParams: {  exchangeAccountId: options['exchangeAccountId'],   brokerId: options['brokerId']  },
-        apiClient: this.apiClient,
-        path: "/v2.0/dashboard/trading/exchange/credentials",
         
         returnType: "structure",
         method: "GET",
