@@ -1,2 +1,2 @@
 
-export type BinanceTimeInForce = 'GoodTillCancel' | 'ImmediateOrCancel' | 'FillOrKill' | 'GoodTillCrossing';
+export type BinanceTimeInForce = 'GoodTillCancel' | 'ImmediateOrCancel' | 'FillOrKill' | 'GoodTillCrossing' | 'GoodTillExpiredOrCanceled';

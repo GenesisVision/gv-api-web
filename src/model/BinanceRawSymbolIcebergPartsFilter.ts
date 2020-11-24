@@ -1,7 +1,7 @@
-import { BinanceRawSymbolFilterType } from './BinanceRawSymbolFilterType';
+import { BinanceSymbolFilterType } from './BinanceSymbolFilterType';
 
 export interface BinanceRawSymbolIcebergPartsFilter {
-    filterType: BinanceRawSymbolFilterType;
+    filterType: BinanceSymbolFilterType;
     limit: number;
 }
 

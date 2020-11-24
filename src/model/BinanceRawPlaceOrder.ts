@@ -1,19 +1,19 @@
-import { BinanceRawOrderResponseType } from './BinanceRawOrderResponseType';
-import { BinanceRawOrderSide } from './BinanceRawOrderSide';
-import { BinanceRawOrderType } from './BinanceRawOrderType';
-import { BinanceRawTimeInForce } from './BinanceRawTimeInForce';
+import { BinanceOrderResponseType } from './BinanceOrderResponseType';
+import { BinanceOrderSide } from './BinanceOrderSide';
+import { BinanceOrderType } from './BinanceOrderType';
+import { BinanceTimeInForce } from './BinanceTimeInForce';
 
 export interface BinanceRawPlaceOrder {
     symbol: string;
-    side: BinanceRawOrderSide;
-    type: BinanceRawOrderType;
+    side: BinanceOrderSide;
+    type: BinanceOrderType;
     quantity: number;
     quoteOrderQuantity: number;
     newClientOrderId: string;
     price: number;
-    timeInForce: BinanceRawTimeInForce;
+    timeInForce: BinanceTimeInForce;
     stopPrice: number;
     icebergQuantity: number;
-    orderResponseType: BinanceRawOrderResponseType;
+    orderResponseType: BinanceOrderResponseType;
 }
 

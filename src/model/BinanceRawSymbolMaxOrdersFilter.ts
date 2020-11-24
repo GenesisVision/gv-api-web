@@ -1,7 +1,7 @@
-import { BinanceRawSymbolFilterType } from './BinanceRawSymbolFilterType';
+import { BinanceSymbolFilterType } from './BinanceSymbolFilterType';
 
 export interface BinanceRawSymbolMaxOrdersFilter {
-    filterType: BinanceRawSymbolFilterType;
+    filterType: BinanceSymbolFilterType;
     maxNumberOrders: number;
 }
 

@@ -1,7 +1,7 @@
-import { BinanceRawSymbolFilterType } from './BinanceRawSymbolFilterType';
+import { BinanceSymbolFilterType } from './BinanceSymbolFilterType';
 
 export interface BinanceRawSymbolMarketLotSizeFilter {
-    filterType: BinanceRawSymbolFilterType;
+    filterType: BinanceSymbolFilterType;
     minQuantity: number;
     maxQuantity: number;
     stepSize: number;

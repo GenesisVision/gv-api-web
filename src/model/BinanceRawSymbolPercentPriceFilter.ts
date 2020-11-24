@@ -1,7 +1,7 @@
-import { BinanceRawSymbolFilterType } from './BinanceRawSymbolFilterType';
+import { BinanceSymbolFilterType } from './BinanceSymbolFilterType';
 
 export interface BinanceRawSymbolPercentPriceFilter {
-    filterType: BinanceRawSymbolFilterType;
+    filterType: BinanceSymbolFilterType;
     multiplierUp: number;
     multiplierDown: number;
     averagePriceMinutes: number;

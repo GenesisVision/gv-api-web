@@ -1,5 +1,5 @@
-import { BinanceRawAccountType } from './BinanceRawAccountType';
-import { BinanceRawOrderType } from './BinanceRawOrderType';
+import { BinanceAccountType } from './BinanceAccountType';
+import { BinanceOrderType } from './BinanceOrderType';
 import { BinanceRawSymbolIcebergPartsFilter } from './BinanceRawSymbolIcebergPartsFilter';
 import { BinanceRawSymbolLotSizeFilter } from './BinanceRawSymbolLotSizeFilter';
 import { BinanceRawSymbolMarketLotSizeFilter } from './BinanceRawSymbolMarketLotSizeFilter';
@@ -8,16 +8,16 @@ import { BinanceRawSymbolMaxOrdersFilter } from './BinanceRawSymbolMaxOrdersFilt
 import { BinanceRawSymbolMinNotionalFilter } from './BinanceRawSymbolMinNotionalFilter';
 import { BinanceRawSymbolPercentPriceFilter } from './BinanceRawSymbolPercentPriceFilter';
 import { BinanceRawSymbolPriceFilter } from './BinanceRawSymbolPriceFilter';
-import { BinanceRawSymbolStatus } from './BinanceRawSymbolStatus';
+import { BinanceSymbolStatus } from './BinanceSymbolStatus';
 
 export interface BinanceRawSymbol {
     name: string;
-    status: BinanceRawSymbolStatus;
+    status: BinanceSymbolStatus;
     baseAsset: string;
     baseAssetPrecision: number;
     quoteAsset: string;
     quoteAssetPrecision: number;
-    orderTypes: Array<BinanceRawOrderType>;
+    orderTypes: Array<BinanceOrderType>;
     iceBergAllowed: boolean;
     isSpotTradingAllowed: boolean;
     isMarginTradingAllowed: boolean;
@@ -25,7 +25,7 @@ export interface BinanceRawSymbol {
     quoteOrderQuantityMarketAllowed: boolean;
     baseCommissionPrecision: number;
     quoteCommissionPrecision: number;
-    permissions: Array<BinanceRawAccountType>;
+    permissions: Array<BinanceAccountType>;
     iceBergPartsFilter: BinanceRawSymbolIcebergPartsFilter;
     lotSizeFilter: BinanceRawSymbolLotSizeFilter;
     marketLotSizeFilter: BinanceRawSymbolMarketLotSizeFilter;

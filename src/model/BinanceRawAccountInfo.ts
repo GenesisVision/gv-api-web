@@ -1,4 +1,4 @@
-import { BinanceRawAccountType } from './BinanceRawAccountType';
+import { BinanceAccountType } from './BinanceAccountType';
 import { BinanceRawBinanceBalance } from './BinanceRawBinanceBalance';
 
 export interface BinanceRawAccountInfo {
@@ -10,8 +10,8 @@ export interface BinanceRawAccountInfo {
     canWithdraw: boolean;
     canDeposit: boolean;
     updateTime: Date;
-    accountType: BinanceRawAccountType;
-    permissions: Array<BinanceRawAccountType>;
+    accountType: BinanceAccountType;
+    permissions: Array<BinanceAccountType>;
     balances: Array<BinanceRawBinanceBalance>;
 }
 

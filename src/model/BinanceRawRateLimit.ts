@@ -1,9 +1,9 @@
-import { BinanceRawRateLimitInterval } from './BinanceRawRateLimitInterval';
-import { BinanceRawRateLimitType } from './BinanceRawRateLimitType';
+import { BinanceRateLimitInterval } from './BinanceRateLimitInterval';
+import { BinanceRateLimitType } from './BinanceRateLimitType';
 
 export interface BinanceRawRateLimit {
-    interval: BinanceRawRateLimitInterval;
-    type: BinanceRawRateLimitType;
+    interval: BinanceRateLimitInterval;
+    type: BinanceRateLimitType;
     intervalNumber: number;
     limit: number;
 }
