@@ -5,6 +5,7 @@ import { BinanceRawSymbolLotSizeFilter } from './BinanceRawSymbolLotSizeFilter';
 import { BinanceRawSymbolMarketLotSizeFilter } from './BinanceRawSymbolMarketLotSizeFilter';
 import { BinanceRawSymbolMaxAlgorithmicOrdersFilter } from './BinanceRawSymbolMaxAlgorithmicOrdersFilter';
 import { BinanceRawSymbolMaxOrdersFilter } from './BinanceRawSymbolMaxOrdersFilter';
+import { BinanceRawSymbolMaxPositionFilter } from './BinanceRawSymbolMaxPositionFilter';
 import { BinanceRawSymbolMinNotionalFilter } from './BinanceRawSymbolMinNotionalFilter';
 import { BinanceRawSymbolPercentPriceFilter } from './BinanceRawSymbolPercentPriceFilter';
 import { BinanceRawSymbolPriceFilter } from './BinanceRawSymbolPriceFilter';
@@ -34,5 +35,6 @@ export interface BinanceRawSymbol {
     minNotionalFilter: BinanceRawSymbolMinNotionalFilter;
     priceFilter: BinanceRawSymbolPriceFilter;
     pricePercentFilter: BinanceRawSymbolPercentPriceFilter;
+    maxPositionFilter: BinanceRawSymbolMaxPositionFilter;
 }
 
