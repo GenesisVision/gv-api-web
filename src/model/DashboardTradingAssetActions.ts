@@ -15,6 +15,7 @@ export interface DashboardTradingAssetActions {
     canMakeDemoDeposit: boolean;
     canChangePassword: boolean;
     canClose: boolean;
+    canClosePeriod: boolean;
     hasTerminal: boolean;
 }
 
