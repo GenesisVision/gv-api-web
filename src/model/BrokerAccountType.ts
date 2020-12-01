@@ -5,6 +5,7 @@ export interface BrokerAccountType {
     name: string;
     description: string;
     type: BrokerTradeServerType;
+    typeTitle: string;
     leverages: Array<number>;
     currencies: Array<string>;
     minimumDepositsAmount: { [key: string]: number; };
