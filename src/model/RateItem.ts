@@ -1,7 +1,6 @@
-import { Currency } from './Currency';
 
 export interface RateItem {
-    currency: Currency;
+    currency: string;
     rate: number;
 }
 
