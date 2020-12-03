@@ -9,6 +9,7 @@ export interface PrivateTradingAccountOwnerActions {
     canEditSignalProviderSettings: boolean;
     isEnoughMoneyToCreateProgram: boolean;
     canConfirm2FA: boolean;
+    canCreateApiKeys: boolean;
     canClose: boolean;
     canChangePassword: boolean;
     canTransferMoney: boolean;

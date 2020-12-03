@@ -3,6 +3,8 @@ import { generateMethod, buildPathString, buildQueryString, handleErrors, checkR
 import { ChangeBrokerProgramRequest } from '../model/ChangeBrokerProgramRequest';
 import { CreateSignalProvider } from '../model/CreateSignalProvider';
 import { ErrorViewModel } from '../model/ErrorViewModel';
+import { ExchangeCredentials } from '../model/ExchangeCredentials';
+import { ExchangeCredentialsInfoItemsViewModel } from '../model/ExchangeCredentialsInfoItemsViewModel';
 import { FundAssetPart } from '../model/FundAssetPart';
 import { MakeExchangeAccountProgram } from '../model/MakeExchangeAccountProgram';
 import { MakeExchangeProgram } from '../model/MakeExchangeProgram';
@@ -189,6 +191,23 @@ export default class AssetsApi {
     })
   };
 
+  createAccountApiKey = (
+    id: string,
+    options: {
+      } = {},
+    init: RequestInit = {}): Promise<ExchangeCredentials> => {
+    
+    return generateMethod<Promise<ExchangeCredentials>>({
+        init,
+        pathParams: {  id  },
+        apiClient: this.apiClient,
+        path: "/v2.0/assets/tradingaccounts/{id}/keys/create",
+        
+        returnType: "structure",
+        method: "POST",
+    })
+  };
+
   createExchangeAccount = (
     options: {
       body?: NewExchangeAccountRequest
@@ -266,6 +285,40 @@ export default class AssetsApi {
         body: JSON.stringify(options['body']),
         returnType: "structure",
         method: "POST",
+    })
+  };
+
+  deleteAccountApiKey = (
+    id: string,
+    options: {
+      } = {},
+    init: RequestInit = {}): Promise<Response> => {
+    
+    return generateMethod<Promise<Response>>({
+        init,
+        pathParams: {  id  },
+        apiClient: this.apiClient,
+        path: "/v2.0/assets/tradingaccounts/keys/{id}/delete",
+        
+        
+        method: "POST",
+    })
+  };
+
+  getAccountApiKey = (
+    id: string,
+    options: {
+      } = {},
+    init: RequestInit = {}): Promise<ExchangeCredentialsInfoItemsViewModel> => {
+    
+    return generateMethod<Promise<ExchangeCredentialsInfoItemsViewModel>>({
+        init,
+        pathParams: {  id  },
+        apiClient: this.apiClient,
+        path: "/v2.0/assets/tradingaccounts/{id}/keys",
+        
+        returnType: "structure",
+        method: "GET",
     })
   };
 

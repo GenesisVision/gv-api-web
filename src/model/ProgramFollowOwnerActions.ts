@@ -9,6 +9,7 @@ export interface ProgramFollowOwnerActions {
     canEditSignalProviderSettings: boolean;
     isEnoughMoneyToCreateProgram: boolean;
     canConfirm2FA: boolean;
+    canCreateApiKeys: boolean;
     canClose: boolean;
     canClosePeriod: boolean;
     canChangePassword: boolean;
