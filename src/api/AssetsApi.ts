@@ -1,6 +1,7 @@
 import ApiClient from "../ApiClient";
 import { generateMethod, buildPathString, buildQueryString, handleErrors, checkRequiredParameter, buildPathAndQuery } from "../utils";
 import { ChangeBrokerProgramRequest } from '../model/ChangeBrokerProgramRequest';
+import { CreateApiKeyModel } from '../model/CreateApiKeyModel';
 import { CreateSignalProvider } from '../model/CreateSignalProvider';
 import { ErrorViewModel } from '../model/ErrorViewModel';
 import { ExchangeCredentials } from '../model/ExchangeCredentials';
@@ -194,6 +195,7 @@ export default class AssetsApi {
   createAccountApiKey = (
     id: string,
     options: {
+      body?: CreateApiKeyModel
       } = {},
     init: RequestInit = {}): Promise<ExchangeCredentials> => {
     
@@ -202,7 +204,7 @@ export default class AssetsApi {
         pathParams: {  id  },
         apiClient: this.apiClient,
         path: "/v2.0/assets/tradingaccounts/{id}/keys/create",
-        
+        body: JSON.stringify(options['body']),
         returnType: "structure",
         method: "POST",
     })
