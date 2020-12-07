@@ -3,6 +3,7 @@ import { generateMethod, buildPathString, buildQueryString, handleErrors, checkR
 import { ChangeBrokerProgramRequest } from '../model/ChangeBrokerProgramRequest';
 import { CreateApiKeyModel } from '../model/CreateApiKeyModel';
 import { CreateSignalProvider } from '../model/CreateSignalProvider';
+import { EditApiKeyRestrictionsModel } from '../model/EditApiKeyRestrictionsModel';
 import { ErrorViewModel } from '../model/ErrorViewModel';
 import { ExchangeCredentials } from '../model/ExchangeCredentials';
 import { ExchangeCredentialsInfoItemsViewModel } from '../model/ExchangeCredentialsInfoItemsViewModel';
@@ -302,6 +303,24 @@ export default class AssetsApi {
         apiClient: this.apiClient,
         path: "/v2.0/assets/tradingaccounts/keys/{id}/delete",
         
+        
+        method: "POST",
+    })
+  };
+
+  editAccountApiKeyRestrictions = (
+    id: string,
+    options: {
+      body?: EditApiKeyRestrictionsModel
+      } = {},
+    init: RequestInit = {}): Promise<Response> => {
+    
+    return generateMethod<Promise<Response>>({
+        init,
+        pathParams: {  id  },
+        apiClient: this.apiClient,
+        path: "/v2.0/assets/tradingaccounts/keys/{id}/edit",
+        body: JSON.stringify(options['body']),
         
         method: "POST",
     })

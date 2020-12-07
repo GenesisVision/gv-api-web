@@ -1,3 +1,4 @@
+import { ExchangeCredentialsIpInfo } from './ExchangeCredentialsIpInfo';
 
 export interface ExchangeCredentialsInfo {
     apiKey: string;
@@ -5,7 +6,9 @@ export interface ExchangeCredentialsInfo {
     id: string;
     title: string;
     isEnabled: boolean;
+    isTradingEnabled: boolean;
     dateCreate: Date;
     dateRemove: Date;
+    allowedIps: Array<ExchangeCredentialsIpInfo>;
 }
 

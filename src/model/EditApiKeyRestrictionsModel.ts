@@ -1,8 +1,7 @@
 
-export interface CreateApiKeyModel {
+export interface EditApiKeyRestrictionsModel {
     allowedIps: Array<string>;
     isTradingEnabled: boolean;
     twoFactorCode: string;
-    title: string;
 }
 

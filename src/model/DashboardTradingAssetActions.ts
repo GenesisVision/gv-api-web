@@ -9,13 +9,13 @@ export interface DashboardTradingAssetActions {
     canEditSignalProviderSettings: boolean;
     isEnoughMoneyToCreateProgram: boolean;
     canConfirm2FA: boolean;
+    canCreateApiKeys: boolean;
     canAddRequestInvest: boolean;
     canAddRequestWithdraw: boolean;
     canTransferMoney: boolean;
     canMakeDemoDeposit: boolean;
     canChangePassword: boolean;
     canClose: boolean;
-    canCreateApiKeys: boolean;
     canClosePeriod: boolean;
     hasTerminal: boolean;
 }
