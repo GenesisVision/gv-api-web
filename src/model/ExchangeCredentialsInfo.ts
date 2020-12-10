@@ -6,6 +6,7 @@ export interface ExchangeCredentialsInfo {
     id: string;
     title: string;
     isEnabled: boolean;
+    isIpRestrict: boolean;
     isTradingEnabled: boolean;
     dateCreate: Date;
     dateRemove: Date;
