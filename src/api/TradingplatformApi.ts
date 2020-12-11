@@ -2,16 +2,21 @@ import ApiClient from "../ApiClient";
 import { generateMethod, buildPathString, buildQueryString, handleErrors, checkRequiredParameter, buildPathAndQuery } from "../utils";
 import { BinanceRaw24HPrice } from '../model/BinanceRaw24HPrice';
 import { BinanceRawAccountInfo } from '../model/BinanceRawAccountInfo';
+import { BinanceRawAggregatedTrade } from '../model/BinanceRawAggregatedTrade';
+import { BinanceRawBookPrice } from '../model/BinanceRawBookPrice';
 import { BinanceRawCancelOrder } from '../model/BinanceRawCancelOrder';
 import { BinanceRawCancelOrderId } from '../model/BinanceRawCancelOrderId';
 import { BinanceRawExchangeInfo } from '../model/BinanceRawExchangeInfo';
 import { BinanceRawFutures24HPrice } from '../model/BinanceRawFutures24HPrice';
 import { BinanceRawFuturesExchangeInfo } from '../model/BinanceRawFuturesExchangeInfo';
+import { BinanceRawFuturesFundingRateHistory } from '../model/BinanceRawFuturesFundingRateHistory';
+import { BinanceRawFuturesMarkPrice } from '../model/BinanceRawFuturesMarkPrice';
 import { BinanceRawKlineInterval } from '../model/BinanceRawKlineInterval';
 import { BinanceRawKlineItemsViewModel } from '../model/BinanceRawKlineItemsViewModel';
 import { BinanceRawOrderBook } from '../model/BinanceRawOrderBook';
 import { BinanceRawOrderItemsViewModel } from '../model/BinanceRawOrderItemsViewModel';
 import { BinanceRawPlaceOrder } from '../model/BinanceRawPlaceOrder';
+import { BinanceRawPrice } from '../model/BinanceRawPrice';
 import { BinanceRawRecentTrade } from '../model/BinanceRawRecentTrade';
 import { Currency } from '../model/Currency';
 import { ErrorViewModel } from '../model/ErrorViewModel';
@@ -188,7 +193,24 @@ export default class TradingplatformApi {
         init,
         queryParams: {  symbol: options['symbol']  },
         apiClient: this.apiClient,
-        path: "/v2.0/tradingplatform/binance/market/futures/ticker/24hr",
+        path: "/v2.0/tradingplatform/binance/futures/market/ticker/24hr",
+        
+        returnType: "structure",
+        method: "GET",
+    })
+  };
+
+  getFuturesBookPrices = (
+    options: {
+      symbol?: string
+      } = {},
+    init: RequestInit = {}): Promise<Array<BinanceRawBookPrice>> => {
+    
+    return generateMethod<Promise<Array<BinanceRawBookPrice>>>({
+        init,
+        queryParams: {  symbol: options['symbol']  },
+        apiClient: this.apiClient,
+        path: "/v2.0/tradingplatform/binance/futures/market/ticker/book",
         
         returnType: "structure",
         method: "GET",
@@ -203,7 +225,27 @@ export default class TradingplatformApi {
     return generateMethod<Promise<BinanceRawFuturesExchangeInfo>>({
         init,
         apiClient: this.apiClient,
-        path: "/v2.0/tradingplatform/binance/server/futures/info",
+        path: "/v2.0/tradingplatform/binance/futures/server/info",
+        
+        returnType: "structure",
+        method: "GET",
+    })
+  };
+
+  getFuturesFundingRates = (
+    options: {
+      symbol?: string,
+      startTime?: Date,
+      endTime?: Date,
+      limit?: number
+      } = {},
+    init: RequestInit = {}): Promise<Array<BinanceRawFuturesFundingRateHistory>> => {
+    
+    return generateMethod<Promise<Array<BinanceRawFuturesFundingRateHistory>>>({
+        init,
+        queryParams: {  symbol: options['symbol'],   startTime: options['startTime'],   endTime: options['endTime'],   limit: options['limit']  },
+        apiClient: this.apiClient,
+        path: "/v2.0/tradingplatform/binance/futures/market/rates/funding",
         
         returnType: "structure",
         method: "GET",
@@ -211,8 +253,8 @@ export default class TradingplatformApi {
   };
 
   getFuturesKlines = (
-    symbol: string,
     options: {
+      symbol?: string,
       interval?: BinanceRawKlineInterval,
       startTime?: Date,
       endTime?: Date,
@@ -222,10 +264,26 @@ export default class TradingplatformApi {
     
     return generateMethod<Promise<BinanceRawKlineItemsViewModel>>({
         init,
-        pathParams: {  symbol  },
-        queryParams: {  interval: options['interval'],   startTime: options['startTime'],   endTime: options['endTime'],   limit: options['limit']  },
+        queryParams: {  symbol: options['symbol'],   interval: options['interval'],   startTime: options['startTime'],   endTime: options['endTime'],   limit: options['limit']  },
         apiClient: this.apiClient,
-        path: "/v2.0/tradingplatform/binance/market/futures/{symbol}/klines",
+        path: "/v2.0/tradingplatform/binance/futures/market/klines",
+        
+        returnType: "structure",
+        method: "GET",
+    })
+  };
+
+  getFuturesMarkPrices = (
+    options: {
+      symbol?: string
+      } = {},
+    init: RequestInit = {}): Promise<Array<BinanceRawFuturesMarkPrice>> => {
+    
+    return generateMethod<Promise<Array<BinanceRawFuturesMarkPrice>>>({
+        init,
+        queryParams: {  symbol: options['symbol']  },
+        apiClient: this.apiClient,
+        path: "/v2.0/tradingplatform/binance/futures/market/prices/mark",
         
         returnType: "structure",
         method: "GET",
@@ -233,18 +291,57 @@ export default class TradingplatformApi {
   };
 
   getFuturesOrderBook = (
-    symbol: string,
     options: {
+      symbol?: string,
       limit?: number
       } = {},
     init: RequestInit = {}): Promise<BinanceRawOrderBook> => {
     
     return generateMethod<Promise<BinanceRawOrderBook>>({
         init,
-        pathParams: {  symbol  },
-        queryParams: {  limit: options['limit']  },
+        queryParams: {  symbol: options['symbol'],   limit: options['limit']  },
         apiClient: this.apiClient,
-        path: "/v2.0/tradingplatform/binance/market/futures/{symbol}/depth",
+        path: "/v2.0/tradingplatform/binance/futures/market/depth",
+        
+        returnType: "structure",
+        method: "GET",
+    })
+  };
+
+  getFuturesSymbolAggregatedTrades = (
+    options: {
+      symbol?: string,
+      fromId?: number,
+      startTime?: Date,
+      endTime?: Date,
+      limit?: number
+      } = {},
+    init: RequestInit = {}): Promise<Array<BinanceRawAggregatedTrade>> => {
+    
+    return generateMethod<Promise<Array<BinanceRawAggregatedTrade>>>({
+        init,
+        queryParams: {  symbol: options['symbol'],   fromId: options['fromId'],   startTime: options['startTime'],   endTime: options['endTime'],   limit: options['limit']  },
+        apiClient: this.apiClient,
+        path: "/v2.0/tradingplatform/binance/futures/market/trades/aggregated",
+        
+        returnType: "structure",
+        method: "GET",
+    })
+  };
+
+  getFuturesSymbolHistoricalTrades = (
+    options: {
+      symbol?: string,
+      limit?: number,
+      fromId?: number
+      } = {},
+    init: RequestInit = {}): Promise<Array<BinanceRawRecentTrade>> => {
+    
+    return generateMethod<Promise<Array<BinanceRawRecentTrade>>>({
+        init,
+        queryParams: {  symbol: options['symbol'],   limit: options['limit'],   fromId: options['fromId']  },
+        apiClient: this.apiClient,
+        path: "/v2.0/tradingplatform/binance/futures/market/trades/historical",
         
         returnType: "structure",
         method: "GET",
@@ -252,18 +349,34 @@ export default class TradingplatformApi {
   };
 
   getFuturesSymbolRecentTrades = (
-    symbol: string,
     options: {
+      symbol?: string,
       limit?: number
       } = {},
     init: RequestInit = {}): Promise<Array<BinanceRawRecentTrade>> => {
     
     return generateMethod<Promise<Array<BinanceRawRecentTrade>>>({
         init,
-        pathParams: {  symbol  },
-        queryParams: {  limit: options['limit']  },
+        queryParams: {  symbol: options['symbol'],   limit: options['limit']  },
         apiClient: this.apiClient,
-        path: "/v2.0/tradingplatform/binance/market/futures/{symbol}/trades/recent",
+        path: "/v2.0/tradingplatform/binance/futures/market/trades/recent",
+        
+        returnType: "structure",
+        method: "GET",
+    })
+  };
+
+  getFuturesTickerPrices = (
+    options: {
+      symbol?: string
+      } = {},
+    init: RequestInit = {}): Promise<BinanceRawPrice> => {
+    
+    return generateMethod<Promise<BinanceRawPrice>>({
+        init,
+        queryParams: {  symbol: options['symbol']  },
+        apiClient: this.apiClient,
+        path: "/v2.0/tradingplatform/binance/futures/market/ticker/price",
         
         returnType: "structure",
         method: "GET",
@@ -329,18 +442,17 @@ export default class TradingplatformApi {
   };
 
   getSymbolRecentTrades = (
-    symbol: string,
     options: {
+      symbol?: string,
       limit?: number
       } = {},
     init: RequestInit = {}): Promise<Array<BinanceRawRecentTrade>> => {
     
     return generateMethod<Promise<Array<BinanceRawRecentTrade>>>({
         init,
-        pathParams: {  symbol  },
-        queryParams: {  limit: options['limit']  },
+        queryParams: {  symbol: options['symbol'],   limit: options['limit']  },
         apiClient: this.apiClient,
-        path: "/v2.0/tradingplatform/binance/market/{symbol}/trades/recent",
+        path: "/v2.0/tradingplatform/binance/market/trades/recent",
         
         returnType: "structure",
         method: "GET",
