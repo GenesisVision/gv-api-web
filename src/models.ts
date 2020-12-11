@@ -37,6 +37,7 @@ export type { BinanceOrderResponseType } from "./model/BinanceOrderResponseType"
 export type { BinanceOrderSide } from "./model/BinanceOrderSide";
 export type { BinanceOrderStatus } from "./model/BinanceOrderStatus";
 export type { BinanceOrderType } from "./model/BinanceOrderType";
+export type { BinancePeriodInterval } from "./model/BinancePeriodInterval";
 export type { BinanceRateLimitInterval } from "./model/BinanceRateLimitInterval";
 export type { BinanceRateLimitType } from "./model/BinanceRateLimitType";
 export type { BinanceRaw24HPrice } from "./model/BinanceRaw24HPrice";
@@ -50,7 +51,10 @@ export type { BinanceRawExchangeInfo } from "./model/BinanceRawExchangeInfo";
 export type { BinanceRawFutures24HPrice } from "./model/BinanceRawFutures24HPrice";
 export type { BinanceRawFuturesExchangeInfo } from "./model/BinanceRawFuturesExchangeInfo";
 export type { BinanceRawFuturesFundingRateHistory } from "./model/BinanceRawFuturesFundingRateHistory";
+export type { BinanceRawFuturesLiquidation } from "./model/BinanceRawFuturesLiquidation";
 export type { BinanceRawFuturesMarkPrice } from "./model/BinanceRawFuturesMarkPrice";
+export type { BinanceRawFuturesOpenInterest } from "./model/BinanceRawFuturesOpenInterest";
+export type { BinanceRawFuturesOpenInterestHistory } from "./model/BinanceRawFuturesOpenInterestHistory";
 export type { BinanceRawFuturesSymbol } from "./model/BinanceRawFuturesSymbol";
 export type { BinanceRawFuturesSymbolLotSizeFilter } from "./model/BinanceRawFuturesSymbolLotSizeFilter";
 export type { BinanceRawFuturesSymbolMarketLotSizeFilter } from "./model/BinanceRawFuturesSymbolMarketLotSizeFilter";

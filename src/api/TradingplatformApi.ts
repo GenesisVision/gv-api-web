@@ -1,5 +1,6 @@
 import ApiClient from "../ApiClient";
 import { generateMethod, buildPathString, buildQueryString, handleErrors, checkRequiredParameter, buildPathAndQuery } from "../utils";
+import { BinancePeriodInterval } from '../model/BinancePeriodInterval';
 import { BinanceRaw24HPrice } from '../model/BinanceRaw24HPrice';
 import { BinanceRawAccountInfo } from '../model/BinanceRawAccountInfo';
 import { BinanceRawAggregatedTrade } from '../model/BinanceRawAggregatedTrade';
@@ -10,7 +11,10 @@ import { BinanceRawExchangeInfo } from '../model/BinanceRawExchangeInfo';
 import { BinanceRawFutures24HPrice } from '../model/BinanceRawFutures24HPrice';
 import { BinanceRawFuturesExchangeInfo } from '../model/BinanceRawFuturesExchangeInfo';
 import { BinanceRawFuturesFundingRateHistory } from '../model/BinanceRawFuturesFundingRateHistory';
+import { BinanceRawFuturesLiquidation } from '../model/BinanceRawFuturesLiquidation';
 import { BinanceRawFuturesMarkPrice } from '../model/BinanceRawFuturesMarkPrice';
+import { BinanceRawFuturesOpenInterest } from '../model/BinanceRawFuturesOpenInterest';
+import { BinanceRawFuturesOpenInterestHistory } from '../model/BinanceRawFuturesOpenInterestHistory';
 import { BinanceRawKlineInterval } from '../model/BinanceRawKlineInterval';
 import { BinanceRawKlineItemsViewModel } from '../model/BinanceRawKlineItemsViewModel';
 import { BinanceRawOrderBook } from '../model/BinanceRawOrderBook';
@@ -273,6 +277,26 @@ export default class TradingplatformApi {
     })
   };
 
+  getFuturesLiquidationOrders = (
+    options: {
+      symbol?: string,
+      startTime?: Date,
+      endTime?: Date,
+      limit?: number
+      } = {},
+    init: RequestInit = {}): Promise<Array<BinanceRawFuturesLiquidation>> => {
+    
+    return generateMethod<Promise<Array<BinanceRawFuturesLiquidation>>>({
+        init,
+        queryParams: {  symbol: options['symbol'],   startTime: options['startTime'],   endTime: options['endTime'],   limit: options['limit']  },
+        apiClient: this.apiClient,
+        path: "/v2.0/tradingplatform/binance/futures/market/orders/liquidation",
+        
+        returnType: "structure",
+        method: "GET",
+    })
+  };
+
   getFuturesMarkPrices = (
     options: {
       symbol?: string
@@ -284,6 +308,44 @@ export default class TradingplatformApi {
         queryParams: {  symbol: options['symbol']  },
         apiClient: this.apiClient,
         path: "/v2.0/tradingplatform/binance/futures/market/prices/mark",
+        
+        returnType: "structure",
+        method: "GET",
+    })
+  };
+
+  getFuturesOpenInterest = (
+    options: {
+      symbol?: string
+      } = {},
+    init: RequestInit = {}): Promise<BinanceRawFuturesOpenInterest> => {
+    
+    return generateMethod<Promise<BinanceRawFuturesOpenInterest>>({
+        init,
+        queryParams: {  symbol: options['symbol']  },
+        apiClient: this.apiClient,
+        path: "/v2.0/tradingplatform/binance/futures/market/rates/interest",
+        
+        returnType: "structure",
+        method: "GET",
+    })
+  };
+
+  getFuturesOpenInterestHistory = (
+    options: {
+      symbol?: string,
+      period?: BinancePeriodInterval,
+      limit?: number,
+      startTime?: Date,
+      endTime?: Date
+      } = {},
+    init: RequestInit = {}): Promise<Array<BinanceRawFuturesOpenInterestHistory>> => {
+    
+    return generateMethod<Promise<Array<BinanceRawFuturesOpenInterestHistory>>>({
+        init,
+        queryParams: {  symbol: options['symbol'],   period: options['period'],   limit: options['limit'],   startTime: options['startTime'],   endTime: options['endTime']  },
+        apiClient: this.apiClient,
+        path: "/v2.0/tradingplatform/binance/futures/market/rates/interest/history",
         
         returnType: "structure",
         method: "GET",
