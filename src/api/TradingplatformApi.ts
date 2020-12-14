@@ -504,17 +504,18 @@ export default class TradingplatformApi {
   };
 
   getSymbolRecentTrades = (
+    symbol: string,
     options: {
-      symbol?: string,
       limit?: number
       } = {},
     init: RequestInit = {}): Promise<Array<BinanceRawRecentTrade>> => {
     
     return generateMethod<Promise<Array<BinanceRawRecentTrade>>>({
         init,
-        queryParams: {  symbol: options['symbol'],   limit: options['limit']  },
+        pathParams: {  symbol  },
+        queryParams: {  limit: options['limit']  },
         apiClient: this.apiClient,
-        path: "/v2.0/tradingplatform/binance/market/trades/recent",
+        path: "/v2.0/tradingplatform/binance/market/{symbol}/trades/recent",
         
         returnType: "structure",
         method: "GET",
