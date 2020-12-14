@@ -9,6 +9,8 @@ export interface BinanceRaw24HPrice {
     openPrice: number;
     highPrice: number;
     lowPrice: number;
+    baseVolume: number;
+    quoteVolume: number;
     openTime: Date;
     closeTime: Date;
     firstTradeId: number;
@@ -19,7 +21,5 @@ export interface BinanceRaw24HPrice {
     bidQuantity: number;
     askPrice: number;
     askQuantity: number;
-    baseVolume: number;
-    quoteVolume: number;
 }
 

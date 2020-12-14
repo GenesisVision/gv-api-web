@@ -9,12 +9,12 @@ import { BinanceRawCancelOrder } from '../model/BinanceRawCancelOrder';
 import { BinanceRawCancelOrderId } from '../model/BinanceRawCancelOrderId';
 import { BinanceRawExchangeInfo } from '../model/BinanceRawExchangeInfo';
 import { BinanceRawFutures24HPrice } from '../model/BinanceRawFutures24HPrice';
-import { BinanceRawFuturesExchangeInfo } from '../model/BinanceRawFuturesExchangeInfo';
 import { BinanceRawFuturesFundingRateHistory } from '../model/BinanceRawFuturesFundingRateHistory';
 import { BinanceRawFuturesLiquidation } from '../model/BinanceRawFuturesLiquidation';
 import { BinanceRawFuturesMarkPrice } from '../model/BinanceRawFuturesMarkPrice';
 import { BinanceRawFuturesOpenInterest } from '../model/BinanceRawFuturesOpenInterest';
 import { BinanceRawFuturesOpenInterestHistory } from '../model/BinanceRawFuturesOpenInterestHistory';
+import { BinanceRawFuturesUsdtExchangeInfo } from '../model/BinanceRawFuturesUsdtExchangeInfo';
 import { BinanceRawKlineInterval } from '../model/BinanceRawKlineInterval';
 import { BinanceRawKlineItemsViewModel } from '../model/BinanceRawKlineItemsViewModel';
 import { BinanceRawOrderBook } from '../model/BinanceRawOrderBook';
@@ -224,9 +224,9 @@ export default class TradingplatformApi {
   getFuturesExchangeInfo = (
     options: {
       } = {},
-    init: RequestInit = {}): Promise<BinanceRawFuturesExchangeInfo> => {
+    init: RequestInit = {}): Promise<BinanceRawFuturesUsdtExchangeInfo> => {
     
-    return generateMethod<Promise<BinanceRawFuturesExchangeInfo>>({
+    return generateMethod<Promise<BinanceRawFuturesUsdtExchangeInfo>>({
         init,
         apiClient: this.apiClient,
         path: "/v2.0/tradingplatform/binance/futures/server/info",

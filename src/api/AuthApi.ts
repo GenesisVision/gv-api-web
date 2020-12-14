@@ -9,6 +9,7 @@ import { RecoveryCodesViewModel } from '../model/RecoveryCodesViewModel';
 import { RegisterViewModel } from '../model/RegisterViewModel';
 import { ResendConfirmationViewModel } from '../model/ResendConfirmationViewModel';
 import { ResetPasswordViewModel } from '../model/ResetPasswordViewModel';
+import { ThreeFactorAuthenticatorConfirm } from '../model/ThreeFactorAuthenticatorConfirm';
 import { TwoFactorAuthenticator } from '../model/TwoFactorAuthenticator';
 import { TwoFactorAuthenticatorConfirm } from '../model/TwoFactorAuthenticatorConfirm';
 import { TwoFactorCodeWithPassword } from '../model/TwoFactorCodeWithPassword';
@@ -66,6 +67,22 @@ export default class AuthApi {
         apiClient: this.apiClient,
         path: "/v2.0/auth/signup/confirm",
         
+        returnType: "primitive",
+        method: "POST",
+    })
+  };
+
+  confirmThreeStepAuth = (
+    options: {
+      body?: ThreeFactorAuthenticatorConfirm
+      } = {},
+    init: RequestInit = {}): Promise<string> => {
+    
+    return generateMethod<Promise<string>>({
+        init,
+        apiClient: this.apiClient,
+        path: "/v2.0/auth/3fa/confirm",
+        body: JSON.stringify(options['body']),
         returnType: "primitive",
         method: "POST",
     })
@@ -212,21 +229,6 @@ export default class AuthApi {
     })
   };
 
-  requestPhoneNumberVerificationCode = (
-    options: {
-      } = {},
-    init: RequestInit = {}): Promise<number> => {
-    
-    return generateMethod<Promise<number>>({
-        init,
-        apiClient: this.apiClient,
-        path: "/v2.0/auth/phone/code",
-        
-        returnType: "primitive",
-        method: "POST",
-    })
-  };
-
   resendConfirmationLink = (
     options: {
       body?: ResendConfirmationViewModel
@@ -270,23 +272,6 @@ export default class AuthApi {
         path: "/v2.0/auth/token/update",
         
         returnType: "primitive",
-        method: "POST",
-    })
-  };
-
-  validatePhoneNumber = (
-    options: {
-      code?: string
-      } = {},
-    init: RequestInit = {}): Promise<Response> => {
-    
-    return generateMethod<Promise<Response>>({
-        init,
-        queryParams: {  code: options['code']  },
-        apiClient: this.apiClient,
-        path: "/v2.0/auth/phone/verify",
-        
-        
         method: "POST",
     })
   };

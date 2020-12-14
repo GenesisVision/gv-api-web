@@ -8,7 +8,7 @@ import { BinanceRawFuturesSymbolPriceFilter } from './BinanceRawFuturesSymbolPri
 import { BinanceSymbolStatus } from './BinanceSymbolStatus';
 import { BinanceTimeInForce } from './BinanceTimeInForce';
 
-export interface BinanceRawFuturesSymbol {
+export interface BinanceRawFuturesUsdtSymbol {
     name: string;
     maintenanceMarginPercent: number;
     pricePrecision: number;
