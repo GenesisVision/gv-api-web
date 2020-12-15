@@ -93,6 +93,59 @@ export default class TradingplatformApi {
     })
   };
 
+  futuresKeepAliveAccountStream = (
+    options: {
+      accountId?: string,
+      listenKey?: string
+      } = {},
+    init: RequestInit = {}): Promise<Response> => {
+    
+    return generateMethod<Promise<Response>>({
+        init,
+        queryParams: {  accountId: options['accountId'],   listenKey: options['listenKey']  },
+        apiClient: this.apiClient,
+        path: "/v2.0/tradingplatform/binance/futures/stream/ping",
+        
+        
+        method: "POST",
+    })
+  };
+
+  futuresStartAccountStream = (
+    options: {
+      accountId?: string
+      } = {},
+    init: RequestInit = {}): Promise<string> => {
+    
+    return generateMethod<Promise<string>>({
+        init,
+        queryParams: {  accountId: options['accountId']  },
+        apiClient: this.apiClient,
+        path: "/v2.0/tradingplatform/binance/futures/stream/start",
+        
+        returnType: "primitive",
+        method: "POST",
+    })
+  };
+
+  futuresStopAccountStream = (
+    options: {
+      accountId?: string,
+      listenKey?: string
+      } = {},
+    init: RequestInit = {}): Promise<Response> => {
+    
+    return generateMethod<Promise<Response>>({
+        init,
+        queryParams: {  accountId: options['accountId'],   listenKey: options['listenKey']  },
+        apiClient: this.apiClient,
+        path: "/v2.0/tradingplatform/binance/futures/stream/stop",
+        
+        
+        method: "POST",
+    })
+  };
+
   get24HPrice = (
     symbol: string,
     options: {
