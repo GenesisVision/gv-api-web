@@ -9,8 +9,11 @@ import { BinanceRawCancelOrder } from '../model/BinanceRawCancelOrder';
 import { BinanceRawCancelOrderId } from '../model/BinanceRawCancelOrderId';
 import { BinanceRawExchangeInfo } from '../model/BinanceRawExchangeInfo';
 import { BinanceRawFutures24HPrice } from '../model/BinanceRawFutures24HPrice';
+import { BinanceRawFuturesBuySellVolumeRatio } from '../model/BinanceRawFuturesBuySellVolumeRatio';
+import { BinanceRawFuturesCompositeIndexInfo } from '../model/BinanceRawFuturesCompositeIndexInfo';
 import { BinanceRawFuturesFundingRateHistory } from '../model/BinanceRawFuturesFundingRateHistory';
 import { BinanceRawFuturesLiquidation } from '../model/BinanceRawFuturesLiquidation';
+import { BinanceRawFuturesLongShortRatio } from '../model/BinanceRawFuturesLongShortRatio';
 import { BinanceRawFuturesMarkPrice } from '../model/BinanceRawFuturesMarkPrice';
 import { BinanceRawFuturesOpenInterest } from '../model/BinanceRawFuturesOpenInterest';
 import { BinanceRawFuturesOpenInterestHistory } from '../model/BinanceRawFuturesOpenInterestHistory';
@@ -221,6 +224,23 @@ export default class TradingplatformApi {
     })
   };
 
+  getFuturesCompositeIndexInfo = (
+    options: {
+      symbol?: string
+      } = {},
+    init: RequestInit = {}): Promise<Array<BinanceRawFuturesCompositeIndexInfo>> => {
+    
+    return generateMethod<Promise<Array<BinanceRawFuturesCompositeIndexInfo>>>({
+        init,
+        queryParams: {  symbol: options['symbol']  },
+        apiClient: this.apiClient,
+        path: "/v2.0/tradingplatform/binance/futures/market/index/composite/info",
+        
+        returnType: "structure",
+        method: "GET",
+    })
+  };
+
   getFuturesExchangeInfo = (
     options: {
       } = {},
@@ -250,6 +270,27 @@ export default class TradingplatformApi {
         queryParams: {  symbol: options['symbol'],   startTime: options['startTime'],   endTime: options['endTime'],   limit: options['limit']  },
         apiClient: this.apiClient,
         path: "/v2.0/tradingplatform/binance/futures/market/rates/funding",
+        
+        returnType: "structure",
+        method: "GET",
+    })
+  };
+
+  getFuturesGlobalLongShortAccountRatio = (
+    options: {
+      symbol?: string,
+      period?: BinancePeriodInterval,
+      limit?: number,
+      startTime?: Date,
+      endTime?: Date
+      } = {},
+    init: RequestInit = {}): Promise<Array<BinanceRawFuturesLongShortRatio>> => {
+    
+    return generateMethod<Promise<Array<BinanceRawFuturesLongShortRatio>>>({
+        init,
+        queryParams: {  symbol: options['symbol'],   period: options['period'],   limit: options['limit'],   startTime: options['startTime'],   endTime: options['endTime']  },
+        apiClient: this.apiClient,
+        path: "/v2.0/tradingplatform/binance/futures/market/ratio/longshort/global/account",
         
         returnType: "structure",
         method: "GET",
@@ -428,6 +469,27 @@ export default class TradingplatformApi {
     })
   };
 
+  getFuturesTakerBuySellVolumeRatio = (
+    options: {
+      symbol?: string,
+      period?: BinancePeriodInterval,
+      limit?: number,
+      startTime?: Date,
+      endTime?: Date
+      } = {},
+    init: RequestInit = {}): Promise<Array<BinanceRawFuturesBuySellVolumeRatio>> => {
+    
+    return generateMethod<Promise<Array<BinanceRawFuturesBuySellVolumeRatio>>>({
+        init,
+        queryParams: {  symbol: options['symbol'],   period: options['period'],   limit: options['limit'],   startTime: options['startTime'],   endTime: options['endTime']  },
+        apiClient: this.apiClient,
+        path: "/v2.0/tradingplatform/binance/futures/market/ratio/buysell/volume/taker",
+        
+        returnType: "structure",
+        method: "GET",
+    })
+  };
+
   getFuturesTickerPrices = (
     options: {
       symbol?: string
@@ -439,6 +501,48 @@ export default class TradingplatformApi {
         queryParams: {  symbol: options['symbol']  },
         apiClient: this.apiClient,
         path: "/v2.0/tradingplatform/binance/futures/market/ticker/price",
+        
+        returnType: "structure",
+        method: "GET",
+    })
+  };
+
+  getFuturesTopLongShortAccountRatio = (
+    options: {
+      symbol?: string,
+      period?: BinancePeriodInterval,
+      limit?: number,
+      startTime?: Date,
+      endTime?: Date
+      } = {},
+    init: RequestInit = {}): Promise<Array<BinanceRawFuturesLongShortRatio>> => {
+    
+    return generateMethod<Promise<Array<BinanceRawFuturesLongShortRatio>>>({
+        init,
+        queryParams: {  symbol: options['symbol'],   period: options['period'],   limit: options['limit'],   startTime: options['startTime'],   endTime: options['endTime']  },
+        apiClient: this.apiClient,
+        path: "/v2.0/tradingplatform/binance/futures/market/ratio/longshort/top/account",
+        
+        returnType: "structure",
+        method: "GET",
+    })
+  };
+
+  getFuturesTopLongShortPositionRatio = (
+    options: {
+      symbol?: string,
+      period?: BinancePeriodInterval,
+      limit?: number,
+      startTime?: Date,
+      endTime?: Date
+      } = {},
+    init: RequestInit = {}): Promise<Array<BinanceRawFuturesLongShortRatio>> => {
+    
+    return generateMethod<Promise<Array<BinanceRawFuturesLongShortRatio>>>({
+        init,
+        queryParams: {  symbol: options['symbol'],   period: options['period'],   limit: options['limit'],   startTime: options['startTime'],   endTime: options['endTime']  },
+        apiClient: this.apiClient,
+        path: "/v2.0/tradingplatform/binance/futures/market/ratio/longshort/top/position",
         
         returnType: "structure",
         method: "GET",
