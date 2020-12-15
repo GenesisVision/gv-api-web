@@ -17,6 +17,7 @@ import { BinanceRawFuturesLongShortRatio } from '../model/BinanceRawFuturesLongS
 import { BinanceRawFuturesMarkPrice } from '../model/BinanceRawFuturesMarkPrice';
 import { BinanceRawFuturesOpenInterest } from '../model/BinanceRawFuturesOpenInterest';
 import { BinanceRawFuturesOpenInterestHistory } from '../model/BinanceRawFuturesOpenInterestHistory';
+import { BinanceRawFuturesOrderItemsViewModel } from '../model/BinanceRawFuturesOrderItemsViewModel';
 import { BinanceRawFuturesUsdtExchangeInfo } from '../model/BinanceRawFuturesUsdtExchangeInfo';
 import { BinanceRawKlineInterval } from '../model/BinanceRawKlineInterval';
 import { BinanceRawKlineItemsViewModel } from '../model/BinanceRawKlineItemsViewModel';
@@ -440,6 +441,23 @@ export default class TradingplatformApi {
         queryParams: {  symbol: options['symbol'],   period: options['period'],   limit: options['limit'],   startTime: options['startTime'],   endTime: options['endTime']  },
         apiClient: this.apiClient,
         path: "/v2.0/tradingplatform/binance/futures/market/rates/interest/history",
+        
+        returnType: "structure",
+        method: "GET",
+    })
+  };
+
+  getFuturesOpenOrders = (
+    options: {
+      accountId?: string
+      } = {},
+    init: RequestInit = {}): Promise<BinanceRawFuturesOrderItemsViewModel> => {
+    
+    return generateMethod<Promise<BinanceRawFuturesOrderItemsViewModel>>({
+        init,
+        queryParams: {  accountId: options['accountId']  },
+        apiClient: this.apiClient,
+        path: "/v2.0/tradingplatform/binance/futures/usdt/orders",
         
         returnType: "structure",
         method: "GET",

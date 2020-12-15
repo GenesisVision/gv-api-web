@@ -38,6 +38,7 @@ export type { BinanceOrderSide } from "./model/BinanceOrderSide";
 export type { BinanceOrderStatus } from "./model/BinanceOrderStatus";
 export type { BinanceOrderType } from "./model/BinanceOrderType";
 export type { BinancePeriodInterval } from "./model/BinancePeriodInterval";
+export type { BinancePositionSide } from "./model/BinancePositionSide";
 export type { BinanceRateLimitInterval } from "./model/BinanceRateLimitInterval";
 export type { BinanceRateLimitType } from "./model/BinanceRateLimitType";
 export type { BinanceRaw24HPrice } from "./model/BinanceRaw24HPrice";
@@ -58,6 +59,8 @@ export type { BinanceRawFuturesLongShortRatio } from "./model/BinanceRawFuturesL
 export type { BinanceRawFuturesMarkPrice } from "./model/BinanceRawFuturesMarkPrice";
 export type { BinanceRawFuturesOpenInterest } from "./model/BinanceRawFuturesOpenInterest";
 export type { BinanceRawFuturesOpenInterestHistory } from "./model/BinanceRawFuturesOpenInterestHistory";
+export type { BinanceRawFuturesOrder } from "./model/BinanceRawFuturesOrder";
+export type { BinanceRawFuturesOrderItemsViewModel } from "./model/BinanceRawFuturesOrderItemsViewModel";
 export type { BinanceRawFuturesSymbolLotSizeFilter } from "./model/BinanceRawFuturesSymbolLotSizeFilter";
 export type { BinanceRawFuturesSymbolMarketLotSizeFilter } from "./model/BinanceRawFuturesSymbolMarketLotSizeFilter";
 export type { BinanceRawFuturesSymbolMaxAlgorithmicOrdersFilter } from "./model/BinanceRawFuturesSymbolMaxAlgorithmicOrdersFilter";
@@ -90,6 +93,7 @@ export type { BinanceRawSymbolPriceFilter } from "./model/BinanceRawSymbolPriceF
 export type { BinanceSymbolFilterType } from "./model/BinanceSymbolFilterType";
 export type { BinanceSymbolStatus } from "./model/BinanceSymbolStatus";
 export type { BinanceTimeInForce } from "./model/BinanceTimeInForce";
+export type { BinanceWorkingType } from "./model/BinanceWorkingType";
 export type { Body } from "./model/Body";
 export type { Broker } from "./model/Broker";
 export type { BrokerAccountType } from "./model/BrokerAccountType";
