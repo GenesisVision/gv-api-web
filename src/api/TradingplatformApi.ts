@@ -14,6 +14,8 @@ import { BinanceRawExchangeInfo } from '../model/BinanceRawExchangeInfo';
 import { BinanceRawFutures24HPrice } from '../model/BinanceRawFutures24HPrice';
 import { BinanceRawFuturesAccountInfo } from '../model/BinanceRawFuturesAccountInfo';
 import { BinanceRawFuturesBuySellVolumeRatio } from '../model/BinanceRawFuturesBuySellVolumeRatio';
+import { BinanceRawFuturesCancelAllOrders } from '../model/BinanceRawFuturesCancelAllOrders';
+import { BinanceRawFuturesCancelOrder } from '../model/BinanceRawFuturesCancelOrder';
 import { BinanceRawFuturesChangeMarginTypeResult } from '../model/BinanceRawFuturesChangeMarginTypeResult';
 import { BinanceRawFuturesCompositeIndexInfo } from '../model/BinanceRawFuturesCompositeIndexInfo';
 import { BinanceRawFuturesFundingRateHistory } from '../model/BinanceRawFuturesFundingRateHistory';
@@ -24,6 +26,8 @@ import { BinanceRawFuturesMarkPrice } from '../model/BinanceRawFuturesMarkPrice'
 import { BinanceRawFuturesOpenInterest } from '../model/BinanceRawFuturesOpenInterest';
 import { BinanceRawFuturesOpenInterestHistory } from '../model/BinanceRawFuturesOpenInterestHistory';
 import { BinanceRawFuturesOrderItemsViewModel } from '../model/BinanceRawFuturesOrderItemsViewModel';
+import { BinanceRawFuturesPlaceOrder } from '../model/BinanceRawFuturesPlaceOrder';
+import { BinanceRawFuturesPlacedOrder } from '../model/BinanceRawFuturesPlacedOrder';
 import { BinanceRawFuturesPositionMode } from '../model/BinanceRawFuturesPositionMode';
 import { BinanceRawFuturesUsdtExchangeInfo } from '../model/BinanceRawFuturesUsdtExchangeInfo';
 import { BinanceRawKlineInterval } from '../model/BinanceRawKlineInterval';
@@ -31,6 +35,7 @@ import { BinanceRawKlineItemsViewModel } from '../model/BinanceRawKlineItemsView
 import { BinanceRawOrderBook } from '../model/BinanceRawOrderBook';
 import { BinanceRawOrderItemsViewModel } from '../model/BinanceRawOrderItemsViewModel';
 import { BinanceRawPlaceOrder } from '../model/BinanceRawPlaceOrder';
+import { BinanceRawPlacedOrder } from '../model/BinanceRawPlacedOrder';
 import { BinanceRawPrice } from '../model/BinanceRawPrice';
 import { BinanceRawRecentTrade } from '../model/BinanceRawRecentTrade';
 import { Currency } from '../model/Currency';
@@ -139,6 +144,45 @@ export default class TradingplatformApi {
     })
   };
 
+  futuresCancelAllOpenOrders = (
+    options: {
+      accountId?: string,
+      symbol?: string
+      } = {},
+    init: RequestInit = {}): Promise<BinanceRawFuturesCancelAllOrders> => {
+    
+    return generateMethod<Promise<BinanceRawFuturesCancelAllOrders>>({
+        init,
+        queryParams: {  accountId: options['accountId'],   symbol: options['symbol']  },
+        apiClient: this.apiClient,
+        path: "/v2.0/tradingplatform/binance/futures/orders/cancel/all",
+        
+        returnType: "structure",
+        method: "POST",
+    })
+  };
+
+  futuresCancelOrder = (
+    options: {
+      accountId?: string,
+      symbol?: string,
+      orderId?: number,
+      origClientOrderId?: string,
+      newClientOrderId?: string
+      } = {},
+    init: RequestInit = {}): Promise<BinanceRawFuturesCancelOrder> => {
+    
+    return generateMethod<Promise<BinanceRawFuturesCancelOrder>>({
+        init,
+        queryParams: {  accountId: options['accountId'],   symbol: options['symbol'],   orderId: options['orderId'],   origClientOrderId: options['origClientOrderId'],   newClientOrderId: options['newClientOrderId']  },
+        apiClient: this.apiClient,
+        path: "/v2.0/tradingplatform/binance/futures/orders/cancel",
+        
+        returnType: "structure",
+        method: "POST",
+    })
+  };
+
   futuresKeepAliveAccountStream = (
     options: {
       accountId?: string,
@@ -153,6 +197,24 @@ export default class TradingplatformApi {
         path: "/v2.0/tradingplatform/binance/futures/stream/ping",
         
         
+        method: "POST",
+    })
+  };
+
+  futuresPlaceOrder = (
+    options: {
+      body?: BinanceRawFuturesPlaceOrder,
+      accountId?: string
+      } = {},
+    init: RequestInit = {}): Promise<BinanceRawFuturesPlacedOrder> => {
+    
+    return generateMethod<Promise<BinanceRawFuturesPlacedOrder>>({
+        init,
+        queryParams: {  accountId: options['accountId']  },
+        apiClient: this.apiClient,
+        path: "/v2.0/tradingplatform/binance/futures/orders/place",
+        body: JSON.stringify(options['body']),
+        returnType: "structure",
         method: "POST",
     })
   };
@@ -843,15 +905,15 @@ export default class TradingplatformApi {
       body?: BinanceRawPlaceOrder,
       accountId?: string
       } = {},
-    init: RequestInit = {}): Promise<Response> => {
+    init: RequestInit = {}): Promise<BinanceRawPlacedOrder> => {
     
-    return generateMethod<Promise<Response>>({
+    return generateMethod<Promise<BinanceRawPlacedOrder>>({
         init,
         queryParams: {  accountId: options['accountId']  },
         apiClient: this.apiClient,
         path: "/v2.0/tradingplatform/binance/spot/orders/place",
         body: JSON.stringify(options['body']),
-        
+        returnType: "structure",
         method: "POST",
     })
   };

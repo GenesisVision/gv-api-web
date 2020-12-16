@@ -58,6 +58,8 @@ export type { BinanceRawFuturesAccountAsset } from "./model/BinanceRawFuturesAcc
 export type { BinanceRawFuturesAccountInfo } from "./model/BinanceRawFuturesAccountInfo";
 export type { BinanceRawFuturesAccountPosition } from "./model/BinanceRawFuturesAccountPosition";
 export type { BinanceRawFuturesBuySellVolumeRatio } from "./model/BinanceRawFuturesBuySellVolumeRatio";
+export type { BinanceRawFuturesCancelAllOrders } from "./model/BinanceRawFuturesCancelAllOrders";
+export type { BinanceRawFuturesCancelOrder } from "./model/BinanceRawFuturesCancelOrder";
 export type { BinanceRawFuturesChangeMarginTypeResult } from "./model/BinanceRawFuturesChangeMarginTypeResult";
 export type { BinanceRawFuturesCompositeIndexInfo } from "./model/BinanceRawFuturesCompositeIndexInfo";
 export type { BinanceRawFuturesCompositeIndexInfoAsset } from "./model/BinanceRawFuturesCompositeIndexInfoAsset";
@@ -70,6 +72,8 @@ export type { BinanceRawFuturesOpenInterest } from "./model/BinanceRawFuturesOpe
 export type { BinanceRawFuturesOpenInterestHistory } from "./model/BinanceRawFuturesOpenInterestHistory";
 export type { BinanceRawFuturesOrder } from "./model/BinanceRawFuturesOrder";
 export type { BinanceRawFuturesOrderItemsViewModel } from "./model/BinanceRawFuturesOrderItemsViewModel";
+export type { BinanceRawFuturesPlaceOrder } from "./model/BinanceRawFuturesPlaceOrder";
+export type { BinanceRawFuturesPlacedOrder } from "./model/BinanceRawFuturesPlacedOrder";
 export type { BinanceRawFuturesPositionMode } from "./model/BinanceRawFuturesPositionMode";
 export type { BinanceRawFuturesSymbolLotSizeFilter } from "./model/BinanceRawFuturesSymbolLotSizeFilter";
 export type { BinanceRawFuturesSymbolMarketLotSizeFilter } from "./model/BinanceRawFuturesSymbolMarketLotSizeFilter";
@@ -86,7 +90,9 @@ export type { BinanceRawOrder } from "./model/BinanceRawOrder";
 export type { BinanceRawOrderBook } from "./model/BinanceRawOrderBook";
 export type { BinanceRawOrderBookEntry } from "./model/BinanceRawOrderBookEntry";
 export type { BinanceRawOrderItemsViewModel } from "./model/BinanceRawOrderItemsViewModel";
+export type { BinanceRawOrderTrade } from "./model/BinanceRawOrderTrade";
 export type { BinanceRawPlaceOrder } from "./model/BinanceRawPlaceOrder";
+export type { BinanceRawPlacedOrder } from "./model/BinanceRawPlacedOrder";
 export type { BinanceRawPrice } from "./model/BinanceRawPrice";
 export type { BinanceRawRateLimit } from "./model/BinanceRawRateLimit";
 export type { BinanceRawRecentTrade } from "./model/BinanceRawRecentTrade";
