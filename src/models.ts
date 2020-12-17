@@ -406,6 +406,7 @@ export type { TradingAccountDetails } from "./model/TradingAccountDetails";
 export type { TradingAccountDetailsItemsViewModel } from "./model/TradingAccountDetailsItemsViewModel";
 export type { TradingAccountMaxCreateAmount } from "./model/TradingAccountMaxCreateAmount";
 export type { TradingAccountMinCreateAmount } from "./model/TradingAccountMinCreateAmount";
+export type { TradingAccountPermission } from "./model/TradingAccountPermission";
 export type { TradingAccountPwdUpdate } from "./model/TradingAccountPwdUpdate";
 export type { TradingPlatformBinanceOrdersMode } from "./model/TradingPlatformBinanceOrdersMode";
 export type { TradingScheduleInfo } from "./model/TradingScheduleInfo";
