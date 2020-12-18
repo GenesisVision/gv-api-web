@@ -184,12 +184,14 @@ export default class TradingaccountApi {
   getTradingAccountDetails = (
     id: string,
     options: {
+      currency?: Currency
       } = {},
     init: RequestInit = {}): Promise<PrivateTradingAccountFull> => {
     
     return generateMethod<Promise<PrivateTradingAccountFull>>({
         init,
         pathParams: {  id  },
+        queryParams: {  currency: options['currency']  },
         apiClient: this.apiClient,
         path: "/v2.0/tradingaccount/{id}",
         

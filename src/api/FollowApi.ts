@@ -130,6 +130,7 @@ export default class FollowApi {
   getFollowAssetDetails = (
     id: string,
     options: {
+      currency?: Currency,
       logoQuality?: ImageQuality
       } = {},
     init: RequestInit = {}): Promise<ProgramFollowDetailsFull> => {
@@ -137,7 +138,7 @@ export default class FollowApi {
     return generateMethod<Promise<ProgramFollowDetailsFull>>({
         init,
         pathParams: {  id  },
-        queryParams: {  logoQuality: options['logoQuality']  },
+        queryParams: {  currency: options['currency'],   logoQuality: options['logoQuality']  },
         apiClient: this.apiClient,
         path: "/v2.0/follow/{id}",
         

@@ -297,6 +297,7 @@ export default class ProgramsApi {
   getProgramDetails = (
     id: string,
     options: {
+      currency?: Currency,
       logoQuality?: ImageQuality
       } = {},
     init: RequestInit = {}): Promise<ProgramFollowDetailsFull> => {
@@ -304,7 +305,7 @@ export default class ProgramsApi {
     return generateMethod<Promise<ProgramFollowDetailsFull>>({
         init,
         pathParams: {  id  },
-        queryParams: {  logoQuality: options['logoQuality']  },
+        queryParams: {  currency: options['currency'],   logoQuality: options['logoQuality']  },
         apiClient: this.apiClient,
         path: "/v2.0/programs/{id}",
         
