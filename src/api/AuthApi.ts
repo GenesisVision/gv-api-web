@@ -2,6 +2,7 @@ import ApiClient from "../ApiClient";
 import { generateMethod, buildPathString, buildQueryString, handleErrors, checkRequiredParameter, buildPathAndQuery } from "../utils";
 import { ChangePasswordViewModel } from '../model/ChangePasswordViewModel';
 import { ErrorViewModel } from '../model/ErrorViewModel';
+import { ErrorViewModelWithToken } from '../model/ErrorViewModelWithToken';
 import { ForgotPasswordViewModel } from '../model/ForgotPasswordViewModel';
 import { LoginViewModel } from '../model/LoginViewModel';
 import { PasswordModel } from '../model/PasswordModel';

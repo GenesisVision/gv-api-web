@@ -162,6 +162,7 @@ export type { EditablePost } from "./model/EditablePost";
 export type { ErrorCodes } from "./model/ErrorCodes";
 export type { ErrorMessage } from "./model/ErrorMessage";
 export type { ErrorViewModel } from "./model/ErrorViewModel";
+export type { ErrorViewModelWithToken } from "./model/ErrorViewModelWithToken";
 export type { EventFilters } from "./model/EventFilters";
 export type { EventGroupType } from "./model/EventGroupType";
 export type { EventInvestingItemFilters } from "./model/EventInvestingItemFilters";
