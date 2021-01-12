@@ -1,6 +1,5 @@
 import ApiClient from "../ApiClient";
 import { generateMethod, buildPathString, buildQueryString, handleErrors, checkRequiredParameter, buildPathAndQuery } from "../utils";
-import { AttachToExternalSignalProviderCommon } from '../model/AttachToExternalSignalProviderCommon';
 import { AttachToExternalSignalProviderExt } from '../model/AttachToExternalSignalProviderExt';
 import { AttachToSignalProvider } from '../model/AttachToSignalProvider';
 import { Currency } from '../model/Currency';
@@ -16,24 +15,6 @@ export default class SignalApi {
   constructor(apiClient: ApiClient) {
     this.apiClient = apiClient;
   }
-
-  attachSlaveToMasterExternalCommonAccount = (
-    id: string,
-    options: {
-      body?: AttachToExternalSignalProviderCommon
-      } = {},
-    init: RequestInit = {}): Promise<Response> => {
-    
-    return generateMethod<Promise<Response>>({
-        init,
-        pathParams: {  id  },
-        apiClient: this.apiClient,
-        path: "/v2.0/signal/external/attach/{id}/common",
-        body: JSON.stringify(options['body']),
-        
-        method: "POST",
-    })
-  };
 
   attachSlaveToMasterExternalPrivateAccount = (
     id: string,

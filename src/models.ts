@@ -24,7 +24,6 @@ export type { AssetRequestDetails } from "./model/AssetRequestDetails";
 export type { AssetSignalSettings } from "./model/AssetSignalSettings";
 export type { AssetType } from "./model/AssetType";
 export type { AssetTypeExt } from "./model/AssetTypeExt";
-export type { AttachToExternalSignalProviderCommon } from "./model/AttachToExternalSignalProviderCommon";
 export type { AttachToExternalSignalProviderExt } from "./model/AttachToExternalSignalProviderExt";
 export type { AttachToSignalProvider } from "./model/AttachToSignalProvider";
 export type { BalanceChartPoint } from "./model/BalanceChartPoint";
