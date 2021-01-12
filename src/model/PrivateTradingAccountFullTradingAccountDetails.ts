@@ -1,6 +1,7 @@
 import { AmountWithCurrency } from './AmountWithCurrency';
 import { Currency } from './Currency';
 import { PrivateTradingAccountType } from './PrivateTradingAccountType';
+import { TradingAccountPermission } from './TradingAccountPermission';
 
 export interface PrivateTradingAccountFullTradingAccountDetails {
     currency: Currency;
@@ -14,5 +15,6 @@ export interface PrivateTradingAccountFullTradingAccountDetails {
     isExternal: boolean;
     showTradingLog: boolean;
     supportedCurrencies: Array<Currency>;
+    permissions: Array<TradingAccountPermission>;
 }
 
