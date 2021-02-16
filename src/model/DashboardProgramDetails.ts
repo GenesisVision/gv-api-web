@@ -9,6 +9,9 @@ export interface DashboardProgramDetails {
     managementFeeCurrent: number;
     successFeeSelected: number;
     successFeeCurrent: number;
+    stopOutLevelSelected: number;
+    stopOutLevelCurrent: number;
+    totalAvailableInvestment: number;
     dailyPeriodDetails: ProgramDailyPeriodDetails;
 }
 

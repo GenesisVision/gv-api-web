@@ -28,6 +28,9 @@ export interface ProgramInvestingDetailsList {
     managementFeeCurrent: number;
     successFeeSelected: number;
     successFeeCurrent: number;
+    totalAvailableInvestment: number;
+    stopOutLevelSelected: number;
+    stopOutLevelCurrent: number;
     owner: ProfilePublicShort;
     brokerDetails: BrokerDetails;
     personalDetails: PersonalInvestingProgramDetailsList;
