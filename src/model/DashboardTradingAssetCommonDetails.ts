@@ -10,6 +10,7 @@ export interface DashboardTradingAssetCommonDetails {
     balance: number;
     login: string;
     currency: Currency;
+    originalCurrency: Currency;
     leverage: number;
     type: PrivateTradingAccountType;
     balances: Array<AmountWithCurrency>;
