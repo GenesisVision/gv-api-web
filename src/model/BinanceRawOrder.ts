@@ -35,5 +35,6 @@ export interface BinanceRawOrder {
     quoteQuantity: number;
     lastQuoteQuantity: number;
     orderListId: number;
+    pnL: number;
 }
 

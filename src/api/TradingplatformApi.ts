@@ -1,6 +1,7 @@
 import ApiClient from "../ApiClient";
 import { generateMethod, buildPathString, buildQueryString, handleErrors, checkRequiredParameter, buildPathAndQuery } from "../utils";
 import { BinanceFuturesMarginType } from '../model/BinanceFuturesMarginType';
+import { BinanceKlineInterval } from '../model/BinanceKlineInterval';
 import { BinancePeriodInterval } from '../model/BinancePeriodInterval';
 import { BinancePositionMode } from '../model/BinancePositionMode';
 import { BinanceRaw24HPrice } from '../model/BinanceRaw24HPrice';
@@ -32,7 +33,6 @@ import { BinanceRawFuturesPosition } from '../model/BinanceRawFuturesPosition';
 import { BinanceRawFuturesPositionMode } from '../model/BinanceRawFuturesPositionMode';
 import { BinanceRawFuturesSymbolBracket } from '../model/BinanceRawFuturesSymbolBracket';
 import { BinanceRawFuturesUsdtExchangeInfo } from '../model/BinanceRawFuturesUsdtExchangeInfo';
-import { BinanceRawKlineInterval } from '../model/BinanceRawKlineInterval';
 import { BinanceRawKlineItemsViewModel } from '../model/BinanceRawKlineItemsViewModel';
 import { BinanceRawOrderBook } from '../model/BinanceRawOrderBook';
 import { BinanceRawOrderItemsViewModel } from '../model/BinanceRawOrderItemsViewModel';
@@ -309,7 +309,7 @@ export default class TradingplatformApi {
   getBlvtKlines = (
     options: {
       symbol?: string,
-      interval?: BinanceRawKlineInterval,
+      interval?: BinanceKlineInterval,
       startTime?: Date,
       endTime?: Date,
       limit?: number
@@ -519,7 +519,7 @@ export default class TradingplatformApi {
   getFuturesKlines = (
     options: {
       symbol?: string,
-      interval?: BinanceRawKlineInterval,
+      interval?: BinanceKlineInterval,
       startTime?: Date,
       endTime?: Date,
       limit?: number
@@ -823,7 +823,7 @@ export default class TradingplatformApi {
   getKlines = (
     symbol: string,
     options: {
-      interval?: BinanceRawKlineInterval,
+      interval?: BinanceKlineInterval,
       startTime?: Date,
       endTime?: Date,
       limit?: number
