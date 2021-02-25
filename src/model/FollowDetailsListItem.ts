@@ -1,5 +1,5 @@
 import { AmountWithCurrency } from './AmountWithCurrency';
-import { BrokerTradeServerType } from './BrokerTradeServerType';
+import { BrokerDetails } from './BrokerDetails';
 import { Currency } from './Currency';
 import { PersonalFollowDetailsList } from './PersonalFollowDetailsList';
 import { ProfilePublicShort } from './ProfilePublicShort';
@@ -21,8 +21,9 @@ export interface FollowDetailsListItem {
     isExternal: boolean;
     leverageMin: number;
     leverageMax: number;
-    brokerId: string;
-    brokerType: BrokerTradeServerType;
+    successFee: number;
+    volumeFee: number;
+    brokerDetails: BrokerDetails;
     owner: ProfilePublicShort;
     statistic: ProfitChart;
     personalDetails: PersonalFollowDetailsList;
