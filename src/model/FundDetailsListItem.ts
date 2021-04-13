@@ -9,6 +9,7 @@ export interface FundDetailsListItem {
     logoUrl: string;
     url: string;
     color: string;
+    index: number;
     title: string;
     description: string;
     creationDate: Date;

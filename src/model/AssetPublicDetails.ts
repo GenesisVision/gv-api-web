@@ -7,6 +7,7 @@ export interface AssetPublicDetails {
     logoUrl: string;
     url: string;
     color: string;
+    index: number;
     creationDate: Date;
     status: string;
     isOwnAsset: boolean;

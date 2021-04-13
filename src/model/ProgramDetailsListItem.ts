@@ -11,6 +11,7 @@ export interface ProgramDetailsListItem {
     type: ProgramType;
     logoUrl: string;
     url: string;
+    index: number;
     description: string;
     color: string;
     title: string;

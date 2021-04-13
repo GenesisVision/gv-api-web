@@ -1,3 +1,4 @@
+import { AnonymousPlatformInfo } from './AnonymousPlatformInfo';
 import { FollowAssetPlatformInfo } from './FollowAssetPlatformInfo';
 import { FundAssetPlatformInfo } from './FundAssetPlatformInfo';
 import { ProgramAssetPlatformInfo } from './ProgramAssetPlatformInfo';
@@ -8,5 +9,6 @@ export interface AssetPlatformInfo {
     tradingAccountInfo: TradingAccountAssetPlatformInfo;
     fundInfo: FundAssetPlatformInfo;
     followInfo: FollowAssetPlatformInfo;
+    anonymousInfo: AnonymousPlatformInfo;
 }
 
