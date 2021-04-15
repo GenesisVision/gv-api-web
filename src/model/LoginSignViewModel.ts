@@ -5,5 +5,7 @@ export interface LoginSignViewModel {
     messageId: string;
     signature: string;
     client: string;
+    twoFactorCode: string;
+    recoveryCode: string;
 }
 
