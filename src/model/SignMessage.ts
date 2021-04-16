@@ -1,5 +1,5 @@
 
-export interface LoginSignMessage {
+export interface SignMessage {
     message: string;
     id: string;
 }
