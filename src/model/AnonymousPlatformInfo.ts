@@ -1,6 +1,6 @@
 
 export interface AnonymousPlatformInfo {
-    isInvestingXdaiEnabled: boolean;
+    isInvestingXDaiEnabled: boolean;
     isInvestingBscEnabled: boolean;
 }
 
