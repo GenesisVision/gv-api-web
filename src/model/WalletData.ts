@@ -1,4 +1,6 @@
 import { Currency } from './Currency';
+import { WalletDepositData } from './WalletDepositData';
+import { WalletWithdrawalCurrencyInfo } from './WalletWithdrawalCurrencyInfo';
 
 export interface WalletData {
     currency: Currency;
@@ -17,8 +19,8 @@ export interface WalletData {
     logoUrl: string;
     isDepositEnabled: boolean;
     isWithdrawalEnabled: boolean;
-    withdrawalCommission: number;
-    depositAddress: string;
+    depositAddresses: Array<WalletDepositData>;
+    withdrawalCommissions: Array<WalletWithdrawalCurrencyInfo>;
     depositUrlCoindirect: string;
 }
 

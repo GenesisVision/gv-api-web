@@ -1,8 +1,11 @@
 import { Currency } from './Currency';
+import { WalletWithdrawalCurrencyInfo } from './WalletWithdrawalCurrencyInfo';
 
 export interface PlatformWithdrawalInfo {
-    withdrawalFee: number;
     currency: Currency;
+    title: string;
+    logoUrl: string;
     isWithdrawalEnabled: boolean;
+    commissions: Array<WalletWithdrawalCurrencyInfo>;
 }
 

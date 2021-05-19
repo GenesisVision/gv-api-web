@@ -8,7 +8,6 @@ import { TransactionExternalType } from '../model/TransactionExternalType';
 import { TransactionInternalType } from '../model/TransactionInternalType';
 import { TransactionViewModelItemsViewModel } from '../model/TransactionViewModelItemsViewModel';
 import { UserCommissionData } from '../model/UserCommissionData';
-import { WalletDepositSummary } from '../model/WalletDepositSummary';
 import { WalletMultiAvailable } from '../model/WalletMultiAvailable';
 import { WalletSummary } from '../model/WalletSummary';
 import { WithdrawalSummary } from '../model/WithdrawalSummary';
@@ -208,21 +207,6 @@ export default class WalletApi {
         path: "/v2.0/wallet/transfer",
         body: JSON.stringify(options['body']),
         
-        method: "POST",
-    })
-  };
-
-  updateDepositWallets = (
-    options: {
-      } = {},
-    init: RequestInit = {}): Promise<WalletDepositSummary> => {
-    
-    return generateMethod<Promise<WalletDepositSummary>>({
-        init,
-        apiClient: this.apiClient,
-        path: "/v2.0/wallet/deposit/update",
-        
-        returnType: "structure",
         method: "POST",
     })
   };
