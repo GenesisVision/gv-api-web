@@ -1,6 +1,8 @@
+import { Blockchain } from './Blockchain';
 
 export interface WalletWithdrawalCurrencyInfo {
     value: number;
-    blockchain: string;
+    blockchain: Blockchain;
+    blockchainTitle: string;
 }
 
