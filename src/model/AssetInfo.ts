@@ -7,6 +7,7 @@ export interface AssetInfo {
     logoUrl: string;
     description: string;
     chartSymbol: string;
+    lastModified: Date;
     tags: Array<Tag>;
     socialLinks: Array<SocialLinkViewModel>;
 }
