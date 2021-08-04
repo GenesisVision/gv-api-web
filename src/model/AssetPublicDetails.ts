@@ -9,6 +9,7 @@ export interface AssetPublicDetails {
     color: string;
     index: number;
     creationDate: Date;
+    lastModified: Date;
     status: string;
     isOwnAsset: boolean;
     typeExt: AssetTypeExt;
