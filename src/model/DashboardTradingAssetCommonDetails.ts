@@ -1,4 +1,4 @@
-import { AmountWithCurrency } from './AmountWithCurrency';
+import { AmountWithLogoCurrency } from './AmountWithLogoCurrency';
 import { Currency } from './Currency';
 import { DashboardTradingAssetStatus } from './DashboardTradingAssetStatus';
 import { PrivateTradingAccountType } from './PrivateTradingAccountType';
@@ -13,7 +13,7 @@ export interface DashboardTradingAssetCommonDetails {
     originalCurrency: Currency;
     leverage: number;
     type: PrivateTradingAccountType;
-    balances: Array<AmountWithCurrency>;
+    balances: Array<AmountWithLogoCurrency>;
     supportedCurrencies: Array<Currency>;
 }
 

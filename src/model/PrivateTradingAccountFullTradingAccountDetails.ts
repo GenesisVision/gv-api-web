@@ -1,4 +1,4 @@
-import { AmountWithCurrency } from './AmountWithCurrency';
+import { AmountWithLogoCurrency } from './AmountWithLogoCurrency';
 import { Currency } from './Currency';
 import { PrivateTradingAccountType } from './PrivateTradingAccountType';
 import { TradingAccountPermission } from './TradingAccountPermission';
@@ -9,7 +9,7 @@ export interface PrivateTradingAccountFullTradingAccountDetails {
     apiKey: string;
     login: string;
     balance: number;
-    balances: Array<AmountWithCurrency>;
+    balances: Array<AmountWithLogoCurrency>;
     type: PrivateTradingAccountType;
     subscriptions: number;
     isExternal: boolean;
