@@ -12,10 +12,6 @@ export interface BinanceRawFuturesOrder {
     clientOrderId: string;
     price: number;
     avgPrice: number;
-    cumulativeQuantity: number;
-    cumulativeQuoteQuantity: number;
-    executedQuantity: number;
-    originalQuantity: number;
     reduceOnly: boolean;
     closePosition: boolean;
     side: BinanceOrderSide;
@@ -25,10 +21,14 @@ export interface BinanceRawFuturesOrder {
     originalType: BinanceOrderType;
     type: BinanceOrderType;
     activatePrice: number;
-    priceRate: number;
     updateTime: Date;
     createdTime: Date;
     workingType: BinanceWorkingType;
     positionSide: BinancePositionSide;
+    quantity: number;
+    quantityFilled: number;
+    quoteQuantityFilled: number;
+    callbackRate: number;
+    lastFilledQuantity: number;
 }
 

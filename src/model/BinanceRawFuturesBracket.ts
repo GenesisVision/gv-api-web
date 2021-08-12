@@ -5,5 +5,6 @@ export interface BinanceRawFuturesBracket {
     cap: number;
     floor: number;
     maintenanceMarginRatio: number;
+    maintAmount: number;
 }
 

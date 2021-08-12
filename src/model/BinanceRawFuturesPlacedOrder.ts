@@ -11,10 +11,6 @@ export interface BinanceRawFuturesPlacedOrder {
     clientOrderId: string;
     price: number;
     avgPrice: number;
-    cumulativeQuantity: number;
-    cumulativeQuoteQuantity: number;
-    executedQuantity: number;
-    originalQuantity: number;
     reduceOnly: boolean;
     side: BinanceOrderSide;
     positionSide: BinancePositionSide;
@@ -28,5 +24,9 @@ export interface BinanceRawFuturesPlacedOrder {
     priceRate: number;
     updateTime: Date;
     workingType: BinanceWorkingType;
+    quantity: number;
+    quantityFilled: number;
+    lastFilledQuantity: number;
+    quoteQuantityFilled: number;
 }
 

@@ -5,14 +5,14 @@ export interface BinanceRawFuturesPosition {
     entryPrice: number;
     marginType: BinanceFuturesMarginType;
     isAutoAddMargin: boolean;
-    positionAmount: number;
     isolatedMargin: number;
     leverage: number;
     liquidationPrice: number;
     markPrice: number;
-    maxNotionalValue: number;
     symbol: string;
-    unrealizedProfit: number;
     positionSide: BinancePositionSide;
+    quantity: number;
+    unrealizedPnL: number;
+    maxNotional: number;
 }
 
