@@ -5,5 +5,6 @@ export interface BinanceRawFuturesMarkPrice {
     fundingRate: number;
     nextFundingTime: Date;
     time: Date;
+    indexPrice: number;
 }
 
