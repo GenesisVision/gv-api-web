@@ -127,6 +127,7 @@ export type { CaptchaType } from "./model/CaptchaType";
 export type { ChangeBrokerProgramRequest } from "./model/ChangeBrokerProgramRequest";
 export type { ChangePasswordViewModel } from "./model/ChangePasswordViewModel";
 export type { ChangeState } from "./model/ChangeState";
+export type { CoinsFilterSorting } from "./model/CoinsFilterSorting";
 export type { Color } from "./model/Color";
 export type { CommonPublicAssetsViewModel } from "./model/CommonPublicAssetsViewModel";
 export type { CreateApiKeyModel } from "./model/CreateApiKeyModel";
