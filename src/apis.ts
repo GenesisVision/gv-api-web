@@ -1,6 +1,7 @@
 export { default as AssetsApi } from "./api/AssetsApi";
 export { default as AuthApi } from "./api/AuthApi";
 export { default as BrokersApi } from "./api/BrokersApi";
+export { default as CoinsApi } from "./api/CoinsApi";
 export { default as DashboardApi } from "./api/DashboardApi";
 export { default as EventsApi } from "./api/EventsApi";
 export { default as ExchangesApi } from "./api/ExchangesApi";
