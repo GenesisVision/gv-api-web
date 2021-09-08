@@ -2,7 +2,7 @@ import { AssetInfo } from './AssetInfo';
 import { AssetProvider } from './AssetProvider';
 import { TickerChart } from './TickerChart';
 
-export interface PlatformCoinAsset {
+export interface CoinsAssetResponse {
     id: string;
     name: string;
     asset: string;
@@ -17,5 +17,8 @@ export interface PlatformCoinAsset {
     marketCap: number;
     details: AssetInfo;
     chart: TickerChart;
+    amount: number;
+    averagePrice: number;
+    profitCurrent: number;
 }
 
