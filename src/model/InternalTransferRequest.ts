@@ -1,4 +1,5 @@
 import { InternalTransferRequestType } from './InternalTransferRequestType';
+import { TransferDetails } from './TransferDetails';
 
 export interface InternalTransferRequest {
     sourceId: string;
@@ -7,5 +8,6 @@ export interface InternalTransferRequest {
     destinationType: InternalTransferRequestType;
     amount: number;
     transferAll: boolean;
+    details: TransferDetails;
 }
 

@@ -430,6 +430,7 @@ export type { TransactionExternalType } from "./model/TransactionExternalType";
 export type { TransactionInternalType } from "./model/TransactionInternalType";
 export type { TransactionViewModel } from "./model/TransactionViewModel";
 export type { TransactionViewModelItemsViewModel } from "./model/TransactionViewModelItemsViewModel";
+export type { TransferDetails } from "./model/TransferDetails";
 export type { TwoFactorAuthenticator } from "./model/TwoFactorAuthenticator";
 export type { TwoFactorAuthenticatorConfirm } from "./model/TwoFactorAuthenticatorConfirm";
 export type { TwoFactorCodeModel } from "./model/TwoFactorCodeModel";
