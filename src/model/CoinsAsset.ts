@@ -2,7 +2,7 @@ import { AssetInfo } from './AssetInfo';
 import { AssetProvider } from './AssetProvider';
 import { TickerChart } from './TickerChart';
 
-export interface CoinsAssetResponse {
+export interface CoinsAsset {
     id: string;
     name: string;
     asset: string;
