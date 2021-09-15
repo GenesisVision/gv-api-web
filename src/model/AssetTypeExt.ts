@@ -1,2 +1,2 @@
 
-export type AssetTypeExt = 'None' | 'Program' | 'SignalProgram' | 'Fund' | 'SignalTradingAccount' | 'ExternalSignalTradingAccount' | 'SelfManagedFund';
+export type AssetTypeExt = 'None' | 'Program' | 'SignalProgram' | 'Fund' | 'SignalTradingAccount' | 'ExternalSignalTradingAccount' | 'SelfManagedFund' | 'Coin';
