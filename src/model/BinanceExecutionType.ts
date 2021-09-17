@@ -1,2 +1,2 @@
 
-export type BinanceExecutionType = 'New' | 'Canceled' | 'Replaced' | 'Rejected' | 'Trade' | 'Expired';
+export type BinanceExecutionType = 'New' | 'Canceled' | 'Replaced' | 'Rejected' | 'Trade' | 'Expired' | 'Amendment';
