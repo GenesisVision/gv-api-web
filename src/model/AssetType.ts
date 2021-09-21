@@ -1,2 +1,2 @@
 
-export type AssetType = 'None' | 'Program' | 'Fund' | 'Follow' | 'Coin';
+export type AssetType = 'None' | 'Program' | 'Fund' | 'Follow';
