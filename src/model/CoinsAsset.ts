@@ -15,6 +15,7 @@ export interface CoinsAsset {
     change24Percent: number;
     change24Volume: number;
     marketCap: number;
+    oefAssetId: string;
     details: AssetInfo;
     chart: TickerChart;
     amount: number;
