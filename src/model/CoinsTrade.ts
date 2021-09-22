@@ -6,6 +6,7 @@ export interface CoinsTrade {
     soldAsset: BasePlatformAsset;
     boughtAmount: number;
     boughtAsset: BasePlatformAsset;
+    price: number;
     commission: number;
     commissionCurrency: string;
 }
