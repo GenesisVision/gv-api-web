@@ -13,7 +13,7 @@ export interface CoinsAsset {
     provider: AssetProvider;
     price: number;
     change24Percent: number;
-    change24Volume: number;
+    totalVolume: number;
     marketCap: number;
     oefAssetId: string;
     details: AssetInfo;
