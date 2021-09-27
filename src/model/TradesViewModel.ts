@@ -2,8 +2,8 @@ import { OrderModel } from './OrderModel';
 import { TradesDelay } from './TradesDelay';
 
 export interface TradesViewModel {
-    readonly items: Array<OrderModel>;
-    readonly total: number;
+    items: Array<OrderModel>;
+    total: number;
     showSwaps: boolean;
     showTickets: boolean;
     showDate: boolean;

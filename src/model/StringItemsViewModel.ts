@@ -1,6 +1,6 @@
 
 export interface StringItemsViewModel {
-    readonly items: Array<string>;
-    readonly total: number;
+    items: Array<string>;
+    total: number;
 }
 

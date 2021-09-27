@@ -1,7 +1,7 @@
 import { Post } from './Post';
 
 export interface PostItemsViewModel {
-    readonly items: Array<Post>;
-    readonly total: number;
+    items: Array<Post>;
+    total: number;
 }
 
