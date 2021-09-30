@@ -1,6 +1,6 @@
 import { AssetInfo } from './AssetInfo';
 import { AssetProvider } from './AssetProvider';
-import { TickerChart } from './TickerChart';
+import { ProfitChart } from './ProfitChart';
 
 export interface CoinsAsset {
     id: string;
@@ -16,7 +16,7 @@ export interface CoinsAsset {
     totalVolume: number;
     marketCap: number;
     details: AssetInfo;
-    chart: TickerChart;
+    chart: ProfitChart;
     amount: number;
     averagePrice: number;
     profitCurrent: number;

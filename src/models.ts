@@ -404,7 +404,6 @@ export type { StringItemsViewModel } from "./model/StringItemsViewModel";
 export type { SubscriptionMode } from "./model/SubscriptionMode";
 export type { Tag } from "./model/Tag";
 export type { ThreeFactorAuthenticatorConfirm } from "./model/ThreeFactorAuthenticatorConfirm";
-export type { TickerChart } from "./model/TickerChart";
 export type { Timeframe } from "./model/Timeframe";
 export type { TimestampDate } from "./model/TimestampDate";
 export type { TradeAssetData } from "./model/TradeAssetData";
