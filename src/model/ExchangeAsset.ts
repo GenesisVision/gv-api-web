@@ -1,5 +1,6 @@
 import { AssetDetails } from './AssetDetails';
 import { Currency } from './Currency';
+import { DashboardTradingAssetStatus } from './DashboardTradingAssetStatus';
 import { TradingAccountPermission } from './TradingAccountPermission';
 
 export interface ExchangeAsset {
@@ -10,5 +11,6 @@ export interface ExchangeAsset {
     currency: Currency;
     permissions: Array<TradingAccountPermission>;
     asset: AssetDetails;
+    status: DashboardTradingAssetStatus;
 }
 
