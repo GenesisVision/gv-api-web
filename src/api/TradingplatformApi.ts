@@ -1,5 +1,6 @@
 import ApiClient from "../ApiClient";
 import { generateMethod, buildPathString, buildQueryString, handleErrors, checkRequiredParameter, buildPathAndQuery } from "../utils";
+import { BinanceAutoCloseType } from '../model/BinanceAutoCloseType';
 import { BinanceFuturesMarginType } from '../model/BinanceFuturesMarginType';
 import { BinanceKlineInterval } from '../model/BinanceKlineInterval';
 import { BinancePeriodInterval } from '../model/BinancePeriodInterval';
@@ -20,11 +21,13 @@ import { BinanceRawFuturesCancelOrder } from '../model/BinanceRawFuturesCancelOr
 import { BinanceRawFuturesChangeMarginTypeResult } from '../model/BinanceRawFuturesChangeMarginTypeResult';
 import { BinanceRawFuturesCompositeIndexInfo } from '../model/BinanceRawFuturesCompositeIndexInfo';
 import { BinanceRawFuturesFundingRateHistory } from '../model/BinanceRawFuturesFundingRateHistory';
+import { BinanceRawFuturesIncomeHistory } from '../model/BinanceRawFuturesIncomeHistory';
 import { BinanceRawFuturesInitialLeverageChangeResult } from '../model/BinanceRawFuturesInitialLeverageChangeResult';
 import { BinanceRawFuturesLongShortRatio } from '../model/BinanceRawFuturesLongShortRatio';
 import { BinanceRawFuturesMarkPrice } from '../model/BinanceRawFuturesMarkPrice';
 import { BinanceRawFuturesOpenInterest } from '../model/BinanceRawFuturesOpenInterest';
 import { BinanceRawFuturesOpenInterestHistory } from '../model/BinanceRawFuturesOpenInterestHistory';
+import { BinanceRawFuturesOrder } from '../model/BinanceRawFuturesOrder';
 import { BinanceRawFuturesOrderItemsViewModel } from '../model/BinanceRawFuturesOrderItemsViewModel';
 import { BinanceRawFuturesPlaceOrder } from '../model/BinanceRawFuturesPlaceOrder';
 import { BinanceRawFuturesPlacedOrder } from '../model/BinanceRawFuturesPlacedOrder';
@@ -32,6 +35,7 @@ import { BinanceRawFuturesPosition } from '../model/BinanceRawFuturesPosition';
 import { BinanceRawFuturesPositionMode } from '../model/BinanceRawFuturesPositionMode';
 import { BinanceRawFuturesSymbolBracket } from '../model/BinanceRawFuturesSymbolBracket';
 import { BinanceRawFuturesUsdtExchangeInfo } from '../model/BinanceRawFuturesUsdtExchangeInfo';
+import { BinanceRawFuturesUsdtTrade } from '../model/BinanceRawFuturesUsdtTrade';
 import { BinanceRawKlineItemsViewModel } from '../model/BinanceRawKlineItemsViewModel';
 import { BinanceRawOrderBook } from '../model/BinanceRawOrderBook';
 import { BinanceRawOrderItemsViewModel } from '../model/BinanceRawOrderItemsViewModel';
@@ -474,6 +478,27 @@ export default class TradingplatformApi {
     })
   };
 
+  getFuturesForcedOrders = (
+    options: {
+      accountId?: string,
+      symbol?: string,
+      closeType?: BinanceAutoCloseType,
+      startTime?: Date,
+      endTime?: Date
+      } = {},
+    init: RequestInit = {}): Promise<Array<BinanceRawFuturesOrder>> => {
+    
+    return generateMethod<Promise<Array<BinanceRawFuturesOrder>>>({
+        init,
+        queryParams: {  accountId: options['accountId'],   symbol: options['symbol'],   closeType: options['closeType'],   startTime: options['startTime'],   endTime: options['endTime']  },
+        apiClient: this.apiClient,
+        path: "/v2.0/tradingplatform/binance/account/futures/orders/force",
+        
+        returnType: "structure",
+        method: "GET",
+    })
+  };
+
   getFuturesFundingRates = (
     options: {
       symbol?: string,
@@ -509,6 +534,28 @@ export default class TradingplatformApi {
         queryParams: {  symbol: options['symbol'],   period: options['period'],   limit: options['limit'],   startTime: options['startTime'],   endTime: options['endTime']  },
         apiClient: this.apiClient,
         path: "/v2.0/tradingplatform/binance/futures/market/ratio/longshort/global/account",
+        
+        returnType: "structure",
+        method: "GET",
+    })
+  };
+
+  getFuturesIncomeHistory = (
+    options: {
+      accountId?: string,
+      symbol?: string,
+      incomeType?: string,
+      startTime?: Date,
+      endTime?: Date,
+      limit?: number
+      } = {},
+    init: RequestInit = {}): Promise<Array<BinanceRawFuturesIncomeHistory>> => {
+    
+    return generateMethod<Promise<Array<BinanceRawFuturesIncomeHistory>>>({
+        init,
+        queryParams: {  accountId: options['accountId'],   symbol: options['symbol'],   incomeType: options['incomeType'],   startTime: options['startTime'],   endTime: options['endTime'],   limit: options['limit']  },
+        apiClient: this.apiClient,
+        path: "/v2.0/tradingplatform/binance/account/futures/income/history",
         
         returnType: "structure",
         method: "GET",
@@ -793,6 +840,27 @@ export default class TradingplatformApi {
         queryParams: {  symbol: options['symbol'],   period: options['period'],   limit: options['limit'],   startTime: options['startTime'],   endTime: options['endTime']  },
         apiClient: this.apiClient,
         path: "/v2.0/tradingplatform/binance/futures/market/ratio/longshort/top/position",
+        
+        returnType: "structure",
+        method: "GET",
+    })
+  };
+
+  getFuturesTrades = (
+    options: {
+      accountId?: string,
+      symbol?: string,
+      startTime?: Date,
+      endTime?: Date,
+      limit?: number
+      } = {},
+    init: RequestInit = {}): Promise<Array<BinanceRawFuturesUsdtTrade>> => {
+    
+    return generateMethod<Promise<Array<BinanceRawFuturesUsdtTrade>>>({
+        init,
+        queryParams: {  accountId: options['accountId'],   symbol: options['symbol'],   startTime: options['startTime'],   endTime: options['endTime'],   limit: options['limit']  },
+        apiClient: this.apiClient,
+        path: "/v2.0/tradingplatform/binance/account/futures/trades",
         
         returnType: "structure",
         method: "GET",

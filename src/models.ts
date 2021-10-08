@@ -32,8 +32,11 @@ export type { BalanceChartPoint } from "./model/BalanceChartPoint";
 export type { BasePlatformAsset } from "./model/BasePlatformAsset";
 export type { BetaTestingType } from "./model/BetaTestingType";
 export type { BinanceAccountType } from "./model/BinanceAccountType";
+export type { BinanceAutoCloseType } from "./model/BinanceAutoCloseType";
+export type { BinanceContractType } from "./model/BinanceContractType";
 export type { BinanceExecutionType } from "./model/BinanceExecutionType";
 export type { BinanceFuturesMarginType } from "./model/BinanceFuturesMarginType";
+export type { BinanceIncomeType } from "./model/BinanceIncomeType";
 export type { BinanceKlineInterval } from "./model/BinanceKlineInterval";
 export type { BinanceOrderRejectReason } from "./model/BinanceOrderRejectReason";
 export type { BinanceOrderResponseType } from "./model/BinanceOrderResponseType";
@@ -66,6 +69,7 @@ export type { BinanceRawFuturesChangeMarginTypeResult } from "./model/BinanceRaw
 export type { BinanceRawFuturesCompositeIndexInfo } from "./model/BinanceRawFuturesCompositeIndexInfo";
 export type { BinanceRawFuturesCompositeIndexInfoAsset } from "./model/BinanceRawFuturesCompositeIndexInfoAsset";
 export type { BinanceRawFuturesFundingRateHistory } from "./model/BinanceRawFuturesFundingRateHistory";
+export type { BinanceRawFuturesIncomeHistory } from "./model/BinanceRawFuturesIncomeHistory";
 export type { BinanceRawFuturesInitialLeverageChangeResult } from "./model/BinanceRawFuturesInitialLeverageChangeResult";
 export type { BinanceRawFuturesLongShortRatio } from "./model/BinanceRawFuturesLongShortRatio";
 export type { BinanceRawFuturesMarkPrice } from "./model/BinanceRawFuturesMarkPrice";
@@ -85,8 +89,10 @@ export type { BinanceRawFuturesSymbolMaxAlgorithmicOrdersFilter } from "./model/
 export type { BinanceRawFuturesSymbolMaxOrdersFilter } from "./model/BinanceRawFuturesSymbolMaxOrdersFilter";
 export type { BinanceRawFuturesSymbolPercentPriceFilter } from "./model/BinanceRawFuturesSymbolPercentPriceFilter";
 export type { BinanceRawFuturesSymbolPriceFilter } from "./model/BinanceRawFuturesSymbolPriceFilter";
+export type { BinanceRawFuturesUsdtAsset } from "./model/BinanceRawFuturesUsdtAsset";
 export type { BinanceRawFuturesUsdtExchangeInfo } from "./model/BinanceRawFuturesUsdtExchangeInfo";
 export type { BinanceRawFuturesUsdtSymbol } from "./model/BinanceRawFuturesUsdtSymbol";
+export type { BinanceRawFuturesUsdtTrade } from "./model/BinanceRawFuturesUsdtTrade";
 export type { BinanceRawKline } from "./model/BinanceRawKline";
 export type { BinanceRawKlineItemsViewModel } from "./model/BinanceRawKlineItemsViewModel";
 export type { BinanceRawOrder } from "./model/BinanceRawOrder";
@@ -112,6 +118,7 @@ export type { BinanceRawSymbolPriceFilter } from "./model/BinanceRawSymbolPriceF
 export type { BinanceSymbolFilterType } from "./model/BinanceSymbolFilterType";
 export type { BinanceSymbolStatus } from "./model/BinanceSymbolStatus";
 export type { BinanceTimeInForce } from "./model/BinanceTimeInForce";
+export type { BinanceUnderlyingType } from "./model/BinanceUnderlyingType";
 export type { BinanceWorkingType } from "./model/BinanceWorkingType";
 export type { Blockchain } from "./model/Blockchain";
 export type { Body } from "./model/Body";
