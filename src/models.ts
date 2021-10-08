@@ -76,6 +76,7 @@ export type { BinanceRawFuturesOrderItemsViewModel } from "./model/BinanceRawFut
 export type { BinanceRawFuturesPlaceOrder } from "./model/BinanceRawFuturesPlaceOrder";
 export type { BinanceRawFuturesPlacedOrder } from "./model/BinanceRawFuturesPlacedOrder";
 export type { BinanceRawFuturesPosition } from "./model/BinanceRawFuturesPosition";
+export type { BinanceRawFuturesPositionInfo } from "./model/BinanceRawFuturesPositionInfo";
 export type { BinanceRawFuturesPositionMode } from "./model/BinanceRawFuturesPositionMode";
 export type { BinanceRawFuturesSymbolBracket } from "./model/BinanceRawFuturesSymbolBracket";
 export type { BinanceRawFuturesSymbolLotSizeFilter } from "./model/BinanceRawFuturesSymbolLotSizeFilter";

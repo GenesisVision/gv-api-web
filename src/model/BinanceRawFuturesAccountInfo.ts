@@ -1,5 +1,5 @@
 import { BinanceRawFuturesAccountAsset } from './BinanceRawFuturesAccountAsset';
-import { BinanceRawFuturesPosition } from './BinanceRawFuturesPosition';
+import { BinanceRawFuturesPositionInfo } from './BinanceRawFuturesPositionInfo';
 
 export interface BinanceRawFuturesAccountInfo {
     canDeposit: boolean;
@@ -19,6 +19,6 @@ export interface BinanceRawFuturesAccountInfo {
     availableBalance: number;
     updateTime: Date;
     assets: Array<BinanceRawFuturesAccountAsset>;
-    positions: Array<BinanceRawFuturesPosition>;
+    positions: Array<BinanceRawFuturesPositionInfo>;
 }
 
