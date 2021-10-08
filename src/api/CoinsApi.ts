@@ -13,6 +13,23 @@ export default class CoinsApi {
     this.apiClient = apiClient;
   }
 
+  addToFavorites = (
+    id: string,
+    options: {
+      } = {},
+    init: RequestInit = {}): Promise<Response> => {
+    
+    return generateMethod<Promise<Response>>({
+        init,
+        pathParams: {  id  },
+        apiClient: this.apiClient,
+        path: "/v2.0/coins/coins/{id}/favorite/add",
+        
+        
+        method: "POST",
+    })
+  };
+
   getCoins = (
     options: {
       sorting?: CoinsFilterSorting,
@@ -54,6 +71,26 @@ export default class CoinsApi {
     })
   };
 
+  getFavoriteCoins = (
+    options: {
+      sorting?: CoinsFilterSorting,
+      assets?: Array<string>,
+      skip?: number,
+      take?: number
+      } = {},
+    init: RequestInit = {}): Promise<CoinsAssetItemsViewModel> => {
+    
+    return generateMethod<Promise<CoinsAssetItemsViewModel>>({
+        init,
+        queryParams: {  Sorting: options['sorting'],   Assets: options['assets'],   Skip: options['skip'],   Take: options['take']  },
+        apiClient: this.apiClient,
+        path: "/v2.0/coins/favorites",
+        
+        returnType: "structure",
+        method: "GET",
+    })
+  };
+
   getUserCoins = (
     options: {
       sorting?: CoinsFilterSorting,
@@ -71,6 +108,23 @@ export default class CoinsApi {
         
         returnType: "structure",
         method: "GET",
+    })
+  };
+
+  removeFromFavorites = (
+    id: string,
+    options: {
+      } = {},
+    init: RequestInit = {}): Promise<Response> => {
+    
+    return generateMethod<Promise<Response>>({
+        init,
+        pathParams: {  id  },
+        apiClient: this.apiClient,
+        path: "/v2.0/coins/coins/{id}/favorite/remove",
+        
+        
+        method: "POST",
     })
   };
 
