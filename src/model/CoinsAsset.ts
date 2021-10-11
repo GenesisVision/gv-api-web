@@ -17,6 +17,7 @@ export interface CoinsAsset {
     marketCap: number;
     details: AssetInfo;
     chart: TickerChart;
+    isFavorite: boolean;
     oefAssetId: string;
     amount: number;
     averagePrice: number;
