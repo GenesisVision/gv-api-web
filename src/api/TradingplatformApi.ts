@@ -867,6 +867,29 @@ export default class TradingplatformApi {
     })
   };
 
+  getFuturesTradesHistory = (
+    options: {
+      accountId?: string,
+      mode?: TradingPlatformBinanceOrdersMode,
+      dateFrom?: Date,
+      dateTo?: Date,
+      symbol?: string,
+      skip?: number,
+      take?: number
+      } = {},
+    init: RequestInit = {}): Promise<BinanceRawFuturesOrderItemsViewModel> => {
+    
+    return generateMethod<Promise<BinanceRawFuturesOrderItemsViewModel>>({
+        init,
+        queryParams: {  AccountId: options['accountId'],   Mode: options['mode'],   DateFrom: options['dateFrom'],   DateTo: options['dateTo'],   Symbol: options['symbol'],   Skip: options['skip'],   Take: options['take']  },
+        apiClient: this.apiClient,
+        path: "/v2.0/tradingplatform/binance/futures/trades",
+        
+        returnType: "structure",
+        method: "GET",
+    })
+  };
+
   getKlines = (
     symbol: string,
     options: {
