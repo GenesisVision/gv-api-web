@@ -34,6 +34,7 @@ export default class CoinsApi {
     options: {
       sorting?: CoinsFilterSorting,
       assets?: Array<string>,
+      isFavorite?: boolean,
       skip?: number,
       take?: number
       } = {},
@@ -41,7 +42,7 @@ export default class CoinsApi {
     
     return generateMethod<Promise<CoinsAssetItemsViewModel>>({
         init,
-        queryParams: {  Sorting: options['sorting'],   Assets: options['assets'],   Skip: options['skip'],   Take: options['take']  },
+        queryParams: {  Sorting: options['sorting'],   Assets: options['assets'],   IsFavorite: options['isFavorite'],   Skip: options['skip'],   Take: options['take']  },
         apiClient: this.apiClient,
         path: "/v2.0/coins",
         
@@ -75,6 +76,7 @@ export default class CoinsApi {
     options: {
       sorting?: CoinsFilterSorting,
       assets?: Array<string>,
+      isFavorite?: boolean,
       skip?: number,
       take?: number
       } = {},
@@ -82,7 +84,7 @@ export default class CoinsApi {
     
     return generateMethod<Promise<CoinsAssetItemsViewModel>>({
         init,
-        queryParams: {  Sorting: options['sorting'],   Assets: options['assets'],   Skip: options['skip'],   Take: options['take']  },
+        queryParams: {  Sorting: options['sorting'],   Assets: options['assets'],   IsFavorite: options['isFavorite'],   Skip: options['skip'],   Take: options['take']  },
         apiClient: this.apiClient,
         path: "/v2.0/coins/favorites",
         
@@ -95,6 +97,7 @@ export default class CoinsApi {
     options: {
       sorting?: CoinsFilterSorting,
       assets?: Array<string>,
+      isFavorite?: boolean,
       skip?: number,
       take?: number
       } = {},
@@ -102,7 +105,7 @@ export default class CoinsApi {
     
     return generateMethod<Promise<CoinsAssetItemsViewModel>>({
         init,
-        queryParams: {  Sorting: options['sorting'],   Assets: options['assets'],   Skip: options['skip'],   Take: options['take']  },
+        queryParams: {  Sorting: options['sorting'],   Assets: options['assets'],   IsFavorite: options['isFavorite'],   Skip: options['skip'],   Take: options['take']  },
         apiClient: this.apiClient,
         path: "/v2.0/coins/portfolio",
         
