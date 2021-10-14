@@ -72,27 +72,6 @@ export default class CoinsApi {
     })
   };
 
-  getFavoriteCoins = (
-    options: {
-      sorting?: CoinsFilterSorting,
-      assets?: Array<string>,
-      isFavorite?: boolean,
-      skip?: number,
-      take?: number
-      } = {},
-    init: RequestInit = {}): Promise<CoinsAssetItemsViewModel> => {
-    
-    return generateMethod<Promise<CoinsAssetItemsViewModel>>({
-        init,
-        queryParams: {  Sorting: options['sorting'],   Assets: options['assets'],   IsFavorite: options['isFavorite'],   Skip: options['skip'],   Take: options['take']  },
-        apiClient: this.apiClient,
-        path: "/v2.0/coins/favorites",
-        
-        returnType: "structure",
-        method: "GET",
-    })
-  };
-
   getUserCoins = (
     options: {
       sorting?: CoinsFilterSorting,
