@@ -22,5 +22,6 @@ export interface CoinsAsset {
     amount: number;
     averagePrice: number;
     profitCurrent: number;
+    total: number;
 }
 
