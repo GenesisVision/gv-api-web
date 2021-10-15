@@ -35,6 +35,7 @@ export type { BinanceAccountType } from "./model/BinanceAccountType";
 export type { BinanceAutoCloseType } from "./model/BinanceAutoCloseType";
 export type { BinanceContractType } from "./model/BinanceContractType";
 export type { BinanceExecutionType } from "./model/BinanceExecutionType";
+export type { BinanceFuturesMarginChangeDirectionType } from "./model/BinanceFuturesMarginChangeDirectionType";
 export type { BinanceFuturesMarginType } from "./model/BinanceFuturesMarginType";
 export type { BinanceIncomeType } from "./model/BinanceIncomeType";
 export type { BinanceKlineInterval } from "./model/BinanceKlineInterval";
@@ -81,6 +82,7 @@ export type { BinanceRawFuturesPlaceOrder } from "./model/BinanceRawFuturesPlace
 export type { BinanceRawFuturesPlacedOrder } from "./model/BinanceRawFuturesPlacedOrder";
 export type { BinanceRawFuturesPosition } from "./model/BinanceRawFuturesPosition";
 export type { BinanceRawFuturesPositionInfo } from "./model/BinanceRawFuturesPositionInfo";
+export type { BinanceRawFuturesPositionMarginResult } from "./model/BinanceRawFuturesPositionMarginResult";
 export type { BinanceRawFuturesPositionMode } from "./model/BinanceRawFuturesPositionMode";
 export type { BinanceRawFuturesSymbolBracket } from "./model/BinanceRawFuturesSymbolBracket";
 export type { BinanceRawFuturesSymbolLotSizeFilter } from "./model/BinanceRawFuturesSymbolLotSizeFilter";

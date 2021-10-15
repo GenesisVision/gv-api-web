@@ -1,10 +1,12 @@
 import ApiClient from "../ApiClient";
 import { generateMethod, buildPathString, buildQueryString, handleErrors, checkRequiredParameter, buildPathAndQuery } from "../utils";
 import { BinanceAutoCloseType } from '../model/BinanceAutoCloseType';
+import { BinanceFuturesMarginChangeDirectionType } from '../model/BinanceFuturesMarginChangeDirectionType';
 import { BinanceFuturesMarginType } from '../model/BinanceFuturesMarginType';
 import { BinanceKlineInterval } from '../model/BinanceKlineInterval';
 import { BinancePeriodInterval } from '../model/BinancePeriodInterval';
 import { BinancePositionMode } from '../model/BinancePositionMode';
+import { BinancePositionSide } from '../model/BinancePositionSide';
 import { BinanceRaw24HPrice } from '../model/BinanceRaw24HPrice';
 import { BinanceRawAccountInfo } from '../model/BinanceRawAccountInfo';
 import { BinanceRawAggregatedTrade } from '../model/BinanceRawAggregatedTrade';
@@ -32,6 +34,7 @@ import { BinanceRawFuturesOrderItemsViewModel } from '../model/BinanceRawFutures
 import { BinanceRawFuturesPlaceOrder } from '../model/BinanceRawFuturesPlaceOrder';
 import { BinanceRawFuturesPlacedOrder } from '../model/BinanceRawFuturesPlacedOrder';
 import { BinanceRawFuturesPosition } from '../model/BinanceRawFuturesPosition';
+import { BinanceRawFuturesPositionMarginResult } from '../model/BinanceRawFuturesPositionMarginResult';
 import { BinanceRawFuturesPositionMode } from '../model/BinanceRawFuturesPositionMode';
 import { BinanceRawFuturesSymbolBracket } from '../model/BinanceRawFuturesSymbolBracket';
 import { BinanceRawFuturesUsdtExchangeInfo } from '../model/BinanceRawFuturesUsdtExchangeInfo';
@@ -143,6 +146,27 @@ export default class TradingplatformApi {
         queryParams: {  accountId: options['accountId'],   symbol: options['symbol'],   marginType: options['marginType']  },
         apiClient: this.apiClient,
         path: "/v2.0/tradingplatform/binance/account/futures/margin/type",
+        
+        returnType: "structure",
+        method: "POST",
+    })
+  };
+
+  changeFuturesPositionMargin = (
+    options: {
+      accountId?: string,
+      symbol?: string,
+      amount?: number,
+      type?: BinanceFuturesMarginChangeDirectionType,
+      positionSide?: BinancePositionSide
+      } = {},
+    init: RequestInit = {}): Promise<BinanceRawFuturesPositionMarginResult> => {
+    
+    return generateMethod<Promise<BinanceRawFuturesPositionMarginResult>>({
+        init,
+        queryParams: {  accountId: options['accountId'],   symbol: options['symbol'],   amount: options['amount'],   type: options['type'],   positionSide: options['positionSide']  },
+        apiClient: this.apiClient,
+        path: "/v2.0/tradingplatform/binance/account/futures/position/margin",
         
         returnType: "structure",
         method: "POST",
