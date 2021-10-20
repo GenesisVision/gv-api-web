@@ -30,6 +30,7 @@ export type { AttachToExternalSignalProviderExt } from "./model/AttachToExternal
 export type { AttachToSignalProvider } from "./model/AttachToSignalProvider";
 export type { BalanceChartPoint } from "./model/BalanceChartPoint";
 export type { BasePlatformAsset } from "./model/BasePlatformAsset";
+export type { BasePlatformAssetItemsViewModel } from "./model/BasePlatformAssetItemsViewModel";
 export type { BetaTestingType } from "./model/BetaTestingType";
 export type { BinanceAccountType } from "./model/BinanceAccountType";
 export type { BinanceAutoCloseType } from "./model/BinanceAutoCloseType";

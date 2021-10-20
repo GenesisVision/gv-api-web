@@ -1,5 +1,6 @@
 import ApiClient from "../ApiClient";
 import { generateMethod, buildPathString, buildQueryString, handleErrors, checkRequiredParameter, buildPathAndQuery } from "../utils";
+import { BasePlatformAssetItemsViewModel } from '../model/BasePlatformAssetItemsViewModel';
 import { CoinsAssetItemsViewModel } from '../model/CoinsAssetItemsViewModel';
 import { CoinsFilterSorting } from '../model/CoinsFilterSorting';
 import { CoinsHistoryEventItemsViewModel } from '../model/CoinsHistoryEventItemsViewModel';
@@ -27,6 +28,21 @@ export default class CoinsApi {
         
         
         method: "POST",
+    })
+  };
+
+  getAllCoins = (
+    options: {
+      } = {},
+    init: RequestInit = {}): Promise<BasePlatformAssetItemsViewModel> => {
+    
+    return generateMethod<Promise<BasePlatformAssetItemsViewModel>>({
+        init,
+        apiClient: this.apiClient,
+        path: "/v2.0/coins/all",
+        
+        returnType: "structure",
+        method: "GET",
     })
   };
 
