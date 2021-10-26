@@ -18,6 +18,7 @@ export interface CoinsAsset {
     details: AssetInfo;
     chart: TickerChart;
     isFavorite: boolean;
+    isTransferred: boolean;
     oefAssetId: string;
     amount: number;
     averagePrice: number;
