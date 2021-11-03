@@ -1,2 +1,2 @@
 
-export type AppPlatform = 'IOs' | 'Android' | 'Web' | 'Admin';
+export type AppPlatform = 'IOs' | 'Android' | 'Web';
