@@ -30,5 +30,8 @@ export interface BinanceRawFuturesOrder {
     quoteQuantityFilled: number;
     callbackRate: number;
     lastFilledQuantity: number;
+    commission: number;
+    commissionAsset: string;
+    realizedProfit: number;
 }
 

@@ -196,14 +196,13 @@ export default class TradingplatformApi {
       accountId?: string,
       symbol?: string,
       orderId?: number,
-      origClientOrderId?: string,
-      newClientOrderId?: string
+      origClientOrderId?: string
       } = {},
     init: RequestInit = {}): Promise<BinanceRawFuturesCancelOrder> => {
     
     return generateMethod<Promise<BinanceRawFuturesCancelOrder>>({
         init,
-        queryParams: {  accountId: options['accountId'],   symbol: options['symbol'],   orderId: options['orderId'],   origClientOrderId: options['origClientOrderId'],   newClientOrderId: options['newClientOrderId']  },
+        queryParams: {  accountId: options['accountId'],   symbol: options['symbol'],   orderId: options['orderId'],   origClientOrderId: options['origClientOrderId']  },
         apiClient: this.apiClient,
         path: "/v2.0/tradingplatform/binance/futures/orders/cancel",
         
