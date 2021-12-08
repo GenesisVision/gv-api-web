@@ -1,3 +1,4 @@
+import { BinanceExecutionType } from './BinanceExecutionType';
 import { BinanceOrderSide } from './BinanceOrderSide';
 import { BinanceOrderStatus } from './BinanceOrderStatus';
 import { BinanceOrderType } from './BinanceOrderType';
@@ -33,5 +34,7 @@ export interface BinanceRawFuturesOrder {
     commission: number;
     commissionAsset: string;
     realizedProfit: number;
+    executionType: BinanceExecutionType;
+    priceLastFilledTrade: number;
 }
 

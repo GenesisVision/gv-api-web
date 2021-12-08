@@ -62,6 +62,7 @@ export type { BinanceRawCancelOrderId } from "./model/BinanceRawCancelOrderId";
 export type { BinanceRawExchangeInfo } from "./model/BinanceRawExchangeInfo";
 export type { BinanceRawFutures24HPrice } from "./model/BinanceRawFutures24HPrice";
 export type { BinanceRawFuturesAccountAsset } from "./model/BinanceRawFuturesAccountAsset";
+export type { BinanceRawFuturesAccountBalance } from "./model/BinanceRawFuturesAccountBalance";
 export type { BinanceRawFuturesAccountInfo } from "./model/BinanceRawFuturesAccountInfo";
 export type { BinanceRawFuturesBracket } from "./model/BinanceRawFuturesBracket";
 export type { BinanceRawFuturesBuySellVolumeRatio } from "./model/BinanceRawFuturesBuySellVolumeRatio";

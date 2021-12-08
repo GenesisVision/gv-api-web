@@ -16,6 +16,7 @@ import { BinanceRawCancelOrder } from '../model/BinanceRawCancelOrder';
 import { BinanceRawCancelOrderId } from '../model/BinanceRawCancelOrderId';
 import { BinanceRawExchangeInfo } from '../model/BinanceRawExchangeInfo';
 import { BinanceRawFutures24HPrice } from '../model/BinanceRawFutures24HPrice';
+import { BinanceRawFuturesAccountBalance } from '../model/BinanceRawFuturesAccountBalance';
 import { BinanceRawFuturesAccountInfo } from '../model/BinanceRawFuturesAccountInfo';
 import { BinanceRawFuturesBuySellVolumeRatio } from '../model/BinanceRawFuturesBuySellVolumeRatio';
 import { BinanceRawFuturesCancelAllOrders } from '../model/BinanceRawFuturesCancelAllOrders';
@@ -411,6 +412,23 @@ export default class TradingplatformApi {
         queryParams: {  symbol: options['symbol']  },
         apiClient: this.apiClient,
         path: "/v2.0/tradingplatform/binance/futures/market/ticker/24hr",
+        
+        returnType: "structure",
+        method: "GET",
+    })
+  };
+
+  getFuturesAccountBalance = (
+    options: {
+      accountId?: string
+      } = {},
+    init: RequestInit = {}): Promise<Array<BinanceRawFuturesAccountBalance>> => {
+    
+    return generateMethod<Promise<Array<BinanceRawFuturesAccountBalance>>>({
+        init,
+        queryParams: {  accountId: options['accountId']  },
+        apiClient: this.apiClient,
+        path: "/v2.0/tradingplatform/binance/account/futures/balance",
         
         returnType: "structure",
         method: "GET",
@@ -965,6 +983,27 @@ export default class TradingplatformApi {
         queryParams: {  limit: options['limit']  },
         apiClient: this.apiClient,
         path: "/v2.0/tradingplatform/binance/market/{symbol}/depth",
+        
+        returnType: "structure",
+        method: "GET",
+    })
+  };
+
+  getSymbolAggregatedTrades = (
+    symbol: string,
+    options: {
+      startTime?: Date,
+      endTime?: Date,
+      limit?: number
+      } = {},
+    init: RequestInit = {}): Promise<Array<BinanceRawAggregatedTrade>> => {
+    
+    return generateMethod<Promise<Array<BinanceRawAggregatedTrade>>>({
+        init,
+        pathParams: {  symbol  },
+        queryParams: {  startTime: options['startTime'],   endTime: options['endTime'],   limit: options['limit']  },
+        apiClient: this.apiClient,
+        path: "/v2.0/tradingplatform/binance/market/{symbol}/trades/aggregated",
         
         returnType: "structure",
         method: "GET",
