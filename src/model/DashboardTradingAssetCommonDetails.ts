@@ -2,6 +2,7 @@ import { AmountWithLogoCurrency } from './AmountWithLogoCurrency';
 import { Currency } from './Currency';
 import { DashboardTradingAssetStatus } from './DashboardTradingAssetStatus';
 import { PrivateTradingAccountType } from './PrivateTradingAccountType';
+import { TradingAccountPermission } from './TradingAccountPermission';
 
 export interface DashboardTradingAssetCommonDetails {
     title: string;
@@ -15,5 +16,6 @@ export interface DashboardTradingAssetCommonDetails {
     type: PrivateTradingAccountType;
     balances: Array<AmountWithLogoCurrency>;
     supportedCurrencies: Array<Currency>;
+    permissions: Array<TradingAccountPermission>;
 }
 
