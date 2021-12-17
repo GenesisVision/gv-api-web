@@ -10,6 +10,7 @@ export interface BinanceRawFuturesOrder {
     accountId: string;
     symbol: string;
     orderId: number;
+    tradeId: number;
     clientOrderId: string;
     price: number;
     avgPrice: number;
