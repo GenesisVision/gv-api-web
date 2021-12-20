@@ -3,6 +3,7 @@ import { generateMethod, buildPathString, buildQueryString, handleErrors, checkR
 import { CreateWithdrawalRequestModel } from '../model/CreateWithdrawalRequestModel';
 import { Currency } from '../model/Currency';
 import { ErrorViewModel } from '../model/ErrorViewModel';
+import { InternalMultiTransferRequest } from '../model/InternalMultiTransferRequest';
 import { InternalTransferRequest } from '../model/InternalTransferRequest';
 import { TransactionExternalType } from '../model/TransactionExternalType';
 import { TransactionInternalType } from '../model/TransactionInternalType';
@@ -223,6 +224,22 @@ export default class WalletApi {
         init,
         apiClient: this.apiClient,
         path: "/v2.0/wallet/transfer",
+        body: JSON.stringify(options['body']),
+        
+        method: "POST",
+    })
+  };
+
+  transferMultiCurrency = (
+    options: {
+      body?: InternalMultiTransferRequest
+      } = {},
+    init: RequestInit = {}): Promise<Response> => {
+    
+    return generateMethod<Promise<Response>>({
+        init,
+        apiClient: this.apiClient,
+        path: "/v2.0/wallet/transfer/multi",
         body: JSON.stringify(options['body']),
         
         method: "POST",

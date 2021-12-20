@@ -241,6 +241,7 @@ export type { GeeTestResult } from "./model/GeeTestResult";
 export type { IOsAppVersion } from "./model/IOsAppVersion";
 export type { ImageLocation } from "./model/ImageLocation";
 export type { ImageQuality } from "./model/ImageQuality";
+export type { InternalMultiTransferRequest } from "./model/InternalMultiTransferRequest";
 export type { InternalTransferRequest } from "./model/InternalTransferRequest";
 export type { InternalTransferRequestType } from "./model/InternalTransferRequestType";
 export type { InvestmentEventItemViewModel } from "./model/InvestmentEventItemViewModel";
