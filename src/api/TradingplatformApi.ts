@@ -689,7 +689,7 @@ export default class TradingplatformApi {
         init,
         queryParams: {  accountId: options['accountId']  },
         apiClient: this.apiClient,
-        path: "/v2.0/tradingplatform/binance/futures/usdt/orders",
+        path: "/v2.0/tradingplatform/binance/futures/usdt/orders/open",
         
         returnType: "structure",
         method: "GET",
@@ -708,6 +708,23 @@ export default class TradingplatformApi {
         queryParams: {  symbol: options['symbol'],   limit: options['limit']  },
         apiClient: this.apiClient,
         path: "/v2.0/tradingplatform/binance/futures/market/depth",
+        
+        returnType: "structure",
+        method: "GET",
+    })
+  };
+
+  getFuturesOrders = (
+    options: {
+      accountId?: string
+      } = {},
+    init: RequestInit = {}): Promise<BinanceRawFuturesOrderItemsViewModel> => {
+    
+    return generateMethod<Promise<BinanceRawFuturesOrderItemsViewModel>>({
+        init,
+        queryParams: {  accountId: options['accountId']  },
+        apiClient: this.apiClient,
+        path: "/v2.0/tradingplatform/binance/futures/usdt/orders",
         
         returnType: "structure",
         method: "GET",
