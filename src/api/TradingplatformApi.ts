@@ -716,13 +716,17 @@ export default class TradingplatformApi {
 
   getFuturesOrders = (
     options: {
-      accountId?: string
+      accountId?: string,
+      symbol?: string,
+      startTime?: Date,
+      endTime?: Date,
+      limit?: number
       } = {},
     init: RequestInit = {}): Promise<BinanceRawFuturesOrderItemsViewModel> => {
     
     return generateMethod<Promise<BinanceRawFuturesOrderItemsViewModel>>({
         init,
-        queryParams: {  accountId: options['accountId']  },
+        queryParams: {  accountId: options['accountId'],   symbol: options['symbol'],   startTime: options['startTime'],   endTime: options['endTime'],   limit: options['limit']  },
         apiClient: this.apiClient,
         path: "/v2.0/tradingplatform/binance/futures/usdt/orders",
         
