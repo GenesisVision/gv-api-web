@@ -1,5 +1,5 @@
 
-export interface BinanceRawFuturesAccountBalance {
+export interface BinanceFuturesAccountBalance {
     accountAlias: string;
     asset: string;
     walletBalance: number;
@@ -8,5 +8,6 @@ export interface BinanceRawFuturesAccountBalance {
     availableBalance: number;
     maxWithdrawAmount: number;
     marginAvailable: boolean;
+    logoUrl: string;
 }
 

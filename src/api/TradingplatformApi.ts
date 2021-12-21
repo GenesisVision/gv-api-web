@@ -1,6 +1,7 @@
 import ApiClient from "../ApiClient";
 import { generateMethod, buildPathString, buildQueryString, handleErrors, checkRequiredParameter, buildPathAndQuery } from "../utils";
 import { BinanceAutoCloseType } from '../model/BinanceAutoCloseType';
+import { BinanceFuturesAccountBalance } from '../model/BinanceFuturesAccountBalance';
 import { BinanceFuturesMarginChangeDirectionType } from '../model/BinanceFuturesMarginChangeDirectionType';
 import { BinanceFuturesMarginType } from '../model/BinanceFuturesMarginType';
 import { BinanceKlineInterval } from '../model/BinanceKlineInterval';
@@ -16,7 +17,6 @@ import { BinanceRawCancelOrder } from '../model/BinanceRawCancelOrder';
 import { BinanceRawCancelOrderId } from '../model/BinanceRawCancelOrderId';
 import { BinanceRawExchangeInfo } from '../model/BinanceRawExchangeInfo';
 import { BinanceRawFutures24HPrice } from '../model/BinanceRawFutures24HPrice';
-import { BinanceRawFuturesAccountBalance } from '../model/BinanceRawFuturesAccountBalance';
 import { BinanceRawFuturesAccountInfo } from '../model/BinanceRawFuturesAccountInfo';
 import { BinanceRawFuturesBuySellVolumeRatio } from '../model/BinanceRawFuturesBuySellVolumeRatio';
 import { BinanceRawFuturesCancelAllOrders } from '../model/BinanceRawFuturesCancelAllOrders';
@@ -422,9 +422,9 @@ export default class TradingplatformApi {
     options: {
       accountId?: string
       } = {},
-    init: RequestInit = {}): Promise<Array<BinanceRawFuturesAccountBalance>> => {
+    init: RequestInit = {}): Promise<Array<BinanceFuturesAccountBalance>> => {
     
-    return generateMethod<Promise<Array<BinanceRawFuturesAccountBalance>>>({
+    return generateMethod<Promise<Array<BinanceFuturesAccountBalance>>>({
         init,
         queryParams: {  accountId: options['accountId']  },
         apiClient: this.apiClient,
