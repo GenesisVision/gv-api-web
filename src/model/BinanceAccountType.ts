@@ -1,2 +1,2 @@
 
-export type BinanceAccountType = 'Spot' | 'Margin' | 'Futures' | 'Leveraged' | 'TRD_GRP_002';
+export type BinanceAccountType = 'Spot' | 'Margin' | 'Futures' | 'Leveraged' | 'TradeGroup002' | 'TradeGroup003';
