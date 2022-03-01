@@ -1,2 +1,2 @@
 
-export type Blockchain = 'None' | 'Bitcoin' | 'Ethereum' | 'BinanceSmartChain' | 'xDaiChain';
+export type Blockchain = 'None' | 'Bitcoin' | 'Ethereum' | 'BinanceSmartChain' | 'xDaiChain' | 'Tron';
