@@ -1,2 +1,2 @@
 
-export type ErrorCodes = 'InternalServerError' | 'ValidationError' | 'RequiresTwoFactor' | 'WrongCaptcha' | 'RequiresEmailConfirmation' | 'RequiresSignature' | 'NotFound' | 'Forbidden';
+export type ErrorCodes = 'InternalServerError' | 'ValidationError' | 'RequiresTwoFactor' | 'WrongCaptcha' | 'RequiresEmailConfirmation' | 'RequiresSignature' | 'NotFound' | 'Forbidden' | 'Unauthorized';
