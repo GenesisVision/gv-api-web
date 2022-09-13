@@ -96,6 +96,21 @@ export default class ProfileApi {
     })
   };
 
+  removeAccount = (
+    options: {
+      } = {},
+    init: RequestInit = {}): Promise<Response> => {
+    
+    return generateMethod<Promise<Response>>({
+        init,
+        apiClient: this.apiClient,
+        path: "/v2.0/profile/remove",
+        
+        
+        method: "POST",
+    })
+  };
+
   removeAvatar = (
     options: {
       } = {},
